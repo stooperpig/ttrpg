@@ -14,6 +14,13 @@ pnpm dev
 bun dev
 ```
 
+junkshows(Bill): git reset --hard     <---- this clears all your changes
+junkshows(Bill): git checkout  xxxxxxx      <---- where xxxxxx is a file name
+junkshows(Bill): git status   <---- will show your modifed/deleted/created files
+junkshows(Bill): git add .    <--- the "." will add everything that has m/d/c
+junkshows(Bill): git commit -m 'xxxxx a comment '    <--- commits your changes
+junkshows(Bill): git push <---- pushes your comment to remote repository
+
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
