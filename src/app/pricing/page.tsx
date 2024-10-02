@@ -2,7 +2,11 @@ export default function About() {
     return (
         <div>
             <br />Pricing<br />
-            We at Malve Studios want to make sure that we are crystal clear about pricing up front for both drop-in and long form campaigns. We also want to make sure you know exactly how much your Professional GM is making off of every session. Our pricing for our Drop-In Campaigns is $40/seat for the full 4 hour session. Our pricing for long form campaigns is $35/seat for a full 3-4 hour session and is billed in 12 hour blocks. Each Professional GM will make $35/seat for Drop-In Campaigns and $30/seat for long form campaigns for every session run. The GM and the party make their own schedule for long form campaigns. A GM or their party may skip sessions as wanted or necessary. However, should a full 12 hour block of sessions be cancelled consecutively without warning, there will be an investigation to determine if the campaign should close out without continuing or if a new block should be implemented. If the skipping of a block is agreed upon before the block is scheduled, there will be no investigation. For any concerns or questions, feel free to <a href="/contact-us">Contact Us.</a><br /><br />
+            At Malve Studios, we want to be super clear about our pricing for both drop-in games and long-term campaigns. Plus, we want you to know exactly how much your GM is earning from each session. For our Drop-In Campaigns, it's $40 per seat for a full 4-hour session. For long-term campaigns, it's $35 per seat for a 3-4 hour session, billed in 12-hour chunks.<br /><br />
+
+<br />Each GM gets $35 per seat for Drop-In Campaigns and $30 per seat for long-term campaigns. The GM and the group can decide the schedule for long-term campaigns, and you're free to skip sessions when needed. But if an entire 12-hour block is cancelled without a heads-up, we’ll look into whether the campaign should continue or wrap up. If skipping a block is agreed upon in advance, no worries—there won’t be any investigation.<br /><br />
+
+<br />Got any questions or concerns? Just reach out to us!<a href="/contact-us">Contact Us.</a><br /><br />
         </div>
     )
 }
