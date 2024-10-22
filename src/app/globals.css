@@ -23,8 +23,10 @@ body {
   padding-top: 50px;
 }
 
-.button {
+.cta_button {
   background-color: rgba(2,184,230,1);
+  text-align: center;
+  padding: 2px 5px 2px 5px;
 }
 
 .dice {

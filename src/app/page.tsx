@@ -22,38 +22,33 @@ export default function Home() {
           Your browser does not support the video tag.
         </video>
         <div className={styles.video_text}>
-          Curated Masters for your games
-          <br />
-          Button (Reserve your GM)
+          <h1>Curated Masters for your games</h1>
+          <div className="cta_button">Reserve your GM</div>
         </div>
       </div>
       <div className="section">
-        Skilled Game Masters bring your campaign to life
+        <h1>Skilled Game Masters bring your campaign to life</h1>
         <br />
         images of masters
         <br />
-        Whether you game of choise Dungeons & Dragons, Pathfinder, or Call of Cthulhu, Malve Studios has hand-picked a selection of expert
-        Dungeon Masters to conduct your story-driven games.
+        <p>Whether you game of choise Dungeons & Dragons, Pathfinder, or Call of Cthulhu, Malve Studios has hand-picked a selection of expert
+        Dungeon Masters to conduct your story-driven games.</p>
         <br />
-        Button (View Our Masters)
+        <div className="cta_button">View Our Masters</div>
       </div>
       <div className="section dice">
-        Play Anywhere. Full Stop.
+        <h1>Play Anywhere. Full Stop.</h1>
+        <p>Experience tailor-made, remote delves with your adventuring party from the comfort of home.</p>
+        <p>Our include Virutal Table Top (VTT) service ensures seamless global connectivity and multitudes of game-enhancing tools.</p>
         <br />
-        Experience tailor-made, remote delves with your adventuring party from the comfort of home.
-        <br />
-        Our include Virutal Table Top (VTT) service ensures seamless global connectivity and multitudes of game-enhancing tools.
-        <br />
-        Button (Learn More)
+        <div className="cta_button">Learn More</div>
       </div>
       <div className="section petal">
-        Master Your Games
+        <h1>Master Your Games</h1>
+        <p>Malve Studios has the perfect DM to evolve your next night.</p>
+        <p>Still unconvinced? Reach out to use directly.</p>
         <br />
-        Malve Studios has the perfect DM to evolve your next night.
-        <br />
-        Still unconvinced? Reach out to use directly.
-        <br />
-        Button (Contact Us)
+        <div className="cta_button">Contact Us</div>
       </div>
     </div>
   );
