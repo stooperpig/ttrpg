@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import CommonHeader from "./_components/common-header";
-import CommonFooter from "./_components/common-footer";
+import Header from "./_components/header";
+import Footer from "./_components/footer";
 
 
 export const metadata: Metadata = {
@@ -17,14 +17,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="stylesheet" href="https://use.typekit.net/cix6ttg.css"/>  
+        <link rel="stylesheet" href="https://use.typekit.net/cix6ttg.css" />
       </head>
       <body>
-          <CommonHeader/>
-          <div className="main">
-            {children}
-            <CommonFooter/>
-          </div>
+        <Header />
+        <div className="main">
+          {children}
+          <Footer />
+        </div>
       </body>
     </html>
   );

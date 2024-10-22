@@ -1,5 +1,6 @@
-.common-footer {
+.common_footer {
     padding-top: 20px;
+    padding-bottom: 20px;
     text-align: center;
     color: rgba(112,91,57,1);
 }
