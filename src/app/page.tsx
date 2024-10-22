@@ -27,22 +27,24 @@ export default function Home() {
       </div>
       <div className="section">
         <h1>Skilled Game Masters bring your campaign to life</h1>
-        <p>Whether you game of choise Dungeons & Dragons, Pathfinder, or Call of Cthulhu, Malve Studios has hand-picked a selection of expert
+        <p>Whether you game of choise Dungeons & Dragons, Pathfinder, or Call of Cthulhu, 
+          <b className="tan">Malve Studios</b> has <b className="tan">hand-picked</b> a selection of expert
           Dungeon Masters to conduct your story-driven games.</p>
         <br />
         <div className="cta_button">View Our Masters</div>
       </div>
       <div className="section dice">
         <h1>Play Anywhere. Full Stop.</h1>
-        <p>Experience tailor-made, remote delves with your adventuring party from the comfort of home.</p>
-        <p>Our include Virutal Table Top (VTT) service ensures seamless global connectivity and multitudes of game-enhancing tools.</p>
+        <p>Experience <b className="tan">tailor-made</b>, remote delves with your adventuring party from the comfort of home.</p>
+        <p>Our include <b className="tan">Virutal Table Top (VTT)</b> service ensures seamless global connectivity 
+          and multitudes of game-enhancing tools.</p>
         <br />
         <div className="cta_button">Learn More</div>
       </div>
       <div className="section petal">
         <h1>Master Your Games</h1>
-        <p>Malve Studios has the perfect DM to evolve your next night.</p>
-        <p>Still unconvinced? Reach out to use directly.</p>
+        <p><b className="tan">Malve Studios</b> has the <b className="tan">perfect DM</b> to evolve your next night.</p>
+        <p>Still unconvinced? <b className="tan">Reach out to use directly.</b></p>
         <br />
         <div className="cta_button">Contact Us</div>
       </div>
