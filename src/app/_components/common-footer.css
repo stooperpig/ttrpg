@@ -1,4 +1,9 @@
 .common-footer {
-    border: 1px solid black;
-    background-color:coral
+    padding-top: 20px;
+    text-align: center;
+    color: rgba(112,91,57,1);
+}
+
+.logo {
+    padding-bottom: 10px;
 }

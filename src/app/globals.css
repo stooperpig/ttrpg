@@ -1,13 +1,285 @@
 html,
 body {
-  max-width: 100vw;
-  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  color: rgba(255,240,222,1);
+  background-color: rgba(22,19,20,1);
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.main {
+  display:flex;
+  flex-direction: column;
+  color: rgba(255,240,222,1);
 }
+
+.section {
+  border: 1px solid black;
+  padding: 20px 20px 20px 20px;
+  text-align: center;
+}
+
+.top-section {
+  padding-top: 50px;
+}
+
+.button {
+  background-color: rgba(2,184,230,1);
+}
+
+.dice {
+  background-image: url('/MS_DiceBG.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.petal {
+  background-image: url('/MS_MalvePedal_BG.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+/* 
+Malve Studios // Web Font Package
+
+Headlines & Subheadlines:  Meno Banner Condensed Light
+Body Copy:                 Garamond Premiere Pro
+DM Signatures:             Austin Pen
+
+Instructions: 
+Read the comments, copy and paste code into your website as necessary.
+
+*/
+
+/* 
+Meno Banner Condensed Light and Meno Banner Condensed Bold
+For use on Headlines, Sub-Headlines, and the Navigation links. 
+
+CSS Examples. Your code may be different.
+*/
+h1,
+h2,
+h3,
+h4 {
+  font-family: "meno-banner-condensed", serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+/* For Bold Headlines. Use Sparingly */
+h1 strong,
+h2 strong,
+h3 strong,
+h4 strong {
+  font-weight: 700;
+}
+
+
+/* 
+Garamond Premiere Pro Regular, Italic, Bold, and Display.
+For use on body copy and buttons.
+
+CSS Examples. Your code may be different.
+*/
+p {
+  font-family: "garamond-premier-pro", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+strong,
+b {
+  font-family: "garamond-premier-pro", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+i,
+em {
+  font-family: "garamond-premier-pro", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+/* Note: line spacing here is expanded. Exact value may not be accurate. Mess with it till it matches the design images. */
+small,
+label {
+  font-family: "garamond-premier-pro-display", serif;
+  font-weight: 400;
+  font-style: normal;
+  line-spacing: 3px;
+}
+
+/*-- Austin Pen Regular. 
+For use in DM Signatures ONLY
+
+I swear to Lathander, Chuck, if I catch you absuing this font I
+will personally gather the signatures to re-instate execution by
+guillotine just so I can have your head on a platter.
+
+*ahem*
+
+CSS Examples. Your code may be different.
+*/
+div.signature {
+  font-family: "austin-pen", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+/*
+Malve Studios // Color Codes
+
+Instructions:
+Hex and RGBA codes for your website colors. Try not to 
+stray from these values if possible.
+
+-----------------------------------------------------
+Warm Black - #161314 or rgba(22,19,20,1);
+-----------------------------------------------------
+For use on:
+1. Page Background
+2. Text on blue or white button states
+3. If your text is on a light background (use sparingly)
+4. Form Input Backgrounds
+5. Home Page "Play Anywhere" background box ( rgba(22,19,20,.8) )
+
+-----------------------------------------------------
+Light Brown - #705b39 or rgba(112,91,57,1)
+-----------------------------------------------------
+For use on:
+1. Masthead Overlay BG on Tablet/Desktop Sizes ( rgba(112,91,57,.3) )
+2. Box behind the Page Title in Internal Pages ( rgba(112,91,57,.3) )
+3. Whole Page Overlay with Menu Open ( rgba(112,91,57,.3) )
+4. Bold or Emphasized Text
+5. Background of Active Button states
+6. Active and Visited Hyperlink
+7. Menu Links except for the page you're currently on
+8. Social Media Buttons
+9. Borders of Boxes and Form Inputs
+10. Dividers <br>
+11. <Small> Text
+12. Inactive/Unselected Form Text
+13. UL and OL bullets/numbers
+14. Form Labels
+15. Copyright in Footer
+16: Active Nav Button
+
+
+-----------------------------------------------------
+Malve Blue - #02b8e6 or rgba(2,184,230,1)
+-----------------------------------------------------
+For use on:
+1. Buttons and CTA
+2. Hyperlinks
+3. Active state for Nav Links and Social Buttons
+4. Nav Toggle Button
+5. Malve Logo
+6. This is another "light touch" situation. It's a great
+"Pay Attention To Me" color. Overuse it, and it lessens 
+the impact of all of them.
+
+-----------------------------------------------------
+Cream White - #fff0de or rgba(255,240,222,1)
+-----------------------------------------------------
+For use on:
+1. Body Copy against Warm Black
+2. Hover State of Hyperlinks
+3. Hover state of Buttons
+4. Current Page in Menu
+5. Malve Logo
+6. Headlines, Subheads
+7. DM Signature
+8. Hover Nav Toggle Button
+
+*/
+
+/*
+
+Malve Studios // Sizing and Dimensions
+
+Sizes for the various pieces of your website.
+
+
+Instructions:
+
+1. Besides Hyperlinks, no clickable item should
+be less than 44px x 44px.
+
+2. Try to keep paragraphs to around 10 words 
+long give or take.
+
+3. Try not to let only 1 or 2 words hang out
+at the end of  a paragraph on their own
+line. <--- (Like That)
+
+4. Exact values may need to be adjusted at
+different breakpoints. Use your best judgement.
+
+5. Prioritize Legiblity
+
+6. Give things space to breathe
+
+7. Next.js may make all these reflexive values
+by default. In that case, try your best to match
+the design images.
+
+*/
+
+
+
+/* Malve Studios - Mobile UI Sizes -*/
+
+/*
+
+Minimum Page Left and Page Right padding: 36px;
+
+Logo: 44x44px
+Nav Toggle Button: 44x44px
+Nav Link: 54pt;
+Nav Social Buttons: 44x44px
+
+h1 (page titles, masthead): 48pt
+h2 (internal headline): 32pt
+h3 (subheadline): 24pt
+
+p (body copy, hyperlinks, cta button text): 18pt
+
+small text, labels: 12pt ALL CAPS
+
+CTA button padding: 15px
+
+form text: 24pt
+
+footer copyright: 14pt
+
+DM portrait: Minimum 160px x 250px
+DM Signature: 32pt
+campaign price: 60pt
+
+*/
+
+/* Malve Studios - Desktop UI Sizes */
+
+/*
+
+Minimum Page Left and Page Right padding (Excluding DM Slideshow): 60px;
+
+Nav "Sections": Two boxes, 50% width each. Nav links in left box, social icons in right.
+Nav Links: Reflexive, minimum 54pt
+Malve Studio Logo Text: 18pt
+
+Masthead Overlay Width: 33%
+
+h1 (page titles, masthead): 60pt
+h2 (internal headline): 48pt
+h3 (subheadline): 32pt
+
+Emphasized (big) paragraph: 24pt
+Sub (small) paragraph: 18pt
+
+*/

@@ -1,8 +1,8 @@
-export default function Masters() {
+export default function Reserve() {
     return (
         <div>
             <div className="section top-section">
-                Masters
+                Reserve
             </div>
         </div>
     )

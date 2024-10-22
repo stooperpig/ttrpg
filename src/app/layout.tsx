@@ -16,10 +16,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="stylesheet" href="https://use.typekit.net/cix6ttg.css"/>  
+      </head>
       <body>
-        <CommonHeader/>
-        {children}
-        <CommonFooter/>
+          <CommonHeader/>
+          <div className="main">
+            {children}
+            <CommonFooter/>
+          </div>
       </body>
     </html>
   );

@@ -1,8 +1,8 @@
-export default function Masters() {
+export default function Services() {
     return (
         <div>
             <div className="section top-section">
-                Masters
+                Services
             </div>
         </div>
     )
