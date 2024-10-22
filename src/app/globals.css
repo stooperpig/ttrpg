@@ -16,7 +16,10 @@ body {
 .section {
   border: 1px solid black;
   padding: 20px 20px 20px 20px;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .top-section {
@@ -26,7 +29,8 @@ body {
 .cta_button {
   background-color: rgba(2,184,230,1);
   text-align: center;
-  padding: 2px 5px 2px 5px;
+  padding: 2px 10px 2px 10px;
+  width: fit-content;
 }
 
 .dice {

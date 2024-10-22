@@ -22,5 +22,21 @@ body, html {
     padding: 20px;
     background-color: #f4f4f4;
     height: 2000px; /* Just to simulate a lot of scrollable content */
+    display: flex;
+    justify-content: center; /* Centers children horizontally */
+    background-color: lightgray;
+    align-items: center;
+    height: 200px; /* Just for example */
+    flex-direction: column;
+  }
+
+  .parent {
+
+  }
+
+  .child {
+    background-color: lightblue;
+    padding: 20px;
+    margin: 5px;
   }
   

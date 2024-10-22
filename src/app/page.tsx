@@ -1,7 +1,6 @@
 'use client'
 
 import { useEffect, useRef } from "react";
-import "./globals.css"
 import styles from "./page.module.css"
 
 export default function Home() {
@@ -28,11 +27,8 @@ export default function Home() {
       </div>
       <div className="section">
         <h1>Skilled Game Masters bring your campaign to life</h1>
-        <br />
-        images of masters
-        <br />
         <p>Whether you game of choise Dungeons & Dragons, Pathfinder, or Call of Cthulhu, Malve Studios has hand-picked a selection of expert
-        Dungeon Masters to conduct your story-driven games.</p>
+          Dungeon Masters to conduct your story-driven games.</p>
         <br />
         <div className="cta_button">View Our Masters</div>
       </div>
