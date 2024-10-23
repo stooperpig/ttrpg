@@ -29,6 +29,8 @@
     color: rgba(2,184,230,1);
     text-decoration: underline;
     text-decoration-color: rgba(2,184,230,1);
+    text-underline-offset: 5px;
+    text-decoration-thickness: 2px;
 }
 
 /* Active link styling */
