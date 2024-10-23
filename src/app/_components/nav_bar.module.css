@@ -1,6 +1,6 @@
 /* NavBar.module.css */
 .nav {
-    background-color: #333;
+    background: rgba(0, 0, 0, 0.0));
     padding: 10px 0;
     text-align: center;
 }
@@ -18,23 +18,20 @@
 }
 
 .navLink {
-    color: white;
+    color: rgba(112,91,57,1);
     text-decoration: none;
     font-size: 16px;
     padding: 10px;
     transition: all 0.3s ease;
 }
 
-.navLink:hover, 
-.navLink:focus {
-    color: blue;
+.navLink:hover {
+    color: rgba(2,184,230,1);
     text-decoration: underline;
-    text-decoration-color: blue;
+    text-decoration-color: rgba(2,184,230,1);
 }
 
 /* Active link styling */
 .active {
-    color: blue;
-    text-decoration: underline;
-    text-decoration-color: blue;
+    color: white;
 }
