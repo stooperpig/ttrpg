@@ -87,7 +87,6 @@ h4 strong {
   font-weight: 700;
 }
 
-
 /* 
 Garamond Premiere Pro Regular, Italic, Bold, and Display.
 For use on body copy and buttons.
@@ -98,6 +97,7 @@ p {
   font-family: "garamond-premier-pro", serif;
   font-weight: 400;
   font-style: normal;
+  font-size: 18pt;
 }
 
 strong,
@@ -144,7 +144,6 @@ div.signature {
   font-style: normal;
 }
 
-
 /*
 Malve Studios // Color Codes
 
@@ -183,7 +182,6 @@ For use on:
 15. Copyright in Footer
 16: Active Nav Button
 
-
 -----------------------------------------------------
 Malve Blue - #02b8e6 or rgba(2,184,230,1)
 -----------------------------------------------------
@@ -212,15 +210,8 @@ For use on:
 
 */
 
-/*
 
-Malve Studios // Sizing and Dimensions
-
-Sizes for the various pieces of your website.
-
-
-Instructions:
-
+/*  Sizing and Dimensions
 1. Besides Hyperlinks, no clickable item should
 be less than 44px x 44px.
 
@@ -241,15 +232,11 @@ different breakpoints. Use your best judgement.
 7. Next.js may make all these reflexive values
 by default. In that case, try your best to match
 the design images.
-
 */
 
-
-
-/* Malve Studios - Mobile UI Sizes -*/
-
-/*
-
+/******************************
+/**       Mobile Sizes       **
+*******************************  
 Minimum Page Left and Page Right padding: 36px;
 
 Logo: 44x44px
@@ -274,13 +261,13 @@ footer copyright: 14pt
 DM portrait: Minimum 160px x 250px
 DM Signature: 32pt
 campaign price: 60pt
+********************************/
 
-*/
 
-/* Malve Studios - Desktop UI Sizes */
-
-/*
-
+@media( min-width: 600px) {
+/******************************
+/**       Desktop Sizes      **
+*******************************
 Minimum Page Left and Page Right padding (Excluding DM Slideshow): 60px;
 
 Nav "Sections": Two boxes, 50% width each. Nav links in left box, social icons in right.
@@ -295,5 +282,5 @@ h3 (subheadline): 32pt
 
 Emphasized (big) paragraph: 24pt
 Sub (small) paragraph: 18pt
-
-*/
+******************************* */
+}

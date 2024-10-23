@@ -21,7 +21,7 @@ export default function Home() {
           Your browser does not support the video tag.
         </video>
         <div className={styles.video_text}>
-          <h1>Curated Masters for your games</h1>
+          <h1 className={styles.masthead_text}>Curated Masters for your games</h1>
           <div className="cta_button">Reserve your GM</div>
         </div>
       </div>

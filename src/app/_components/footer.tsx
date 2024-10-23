@@ -7,7 +7,7 @@ export default function Footer() {
             <div className={styles.logo}>
                 <Image src="/MS_Logo_White.svg" alt="My SVG" width={44} height={44} />
             </div>
-            &#169;Malve Studios 2024. All Rights Reserved.
+            <p><span className={styles.copyright}>&#169;</span>Malve Studios 2024. All Rights Reserved.</p>
         </div>
     );
 }

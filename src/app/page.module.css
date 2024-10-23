@@ -1,7 +1,7 @@
 .video_background {
     position: relative;
     width: 100%;
-    height: 440px;
+    height: 400px;
     /* Full height */
     overflow: hidden;
     /* Hide scrollbars if content overflows */
@@ -23,13 +23,18 @@
 .video_text {
     position: relative;
     position: absolute;
-    top: 45%;
+    top: 15%;
     left: 10%;
     z-index: 10;
     /* Ensure content is on top of the video */
     color: white;
+    padding: 0px 20px 0px 20px;
+    border: 1px solid black;
 }
 
-.masthead {
-    border: 1px solid black;
+.masthead_text {
+    font-size: 32pt;
+}
+
+@media( min-width: 600px) {
 }

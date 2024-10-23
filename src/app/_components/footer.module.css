@@ -8,3 +8,10 @@
 .logo {
     padding-bottom: 10px;
 }
+
+.copyright {
+    font-size: 14pt
+}
+
+@media( min-width: 600px) {
+}

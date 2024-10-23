@@ -7,31 +7,57 @@
     color: white;
     text-align: center;
     z-index: 1000;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
     padding: 18px 0px 18px 0px;
     background: linear-gradient(to bottom, rgba(0, 0, 0, 1.0), rgba(0, 0, 0, 0.0));
     /* Black with gradient transparency */
+}
+
+.mobile_header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.desktop_header {
+    display: none;
+    flex-direction: row;
 }
 
 .logo {
     display: flex;
     justify-content: left;
     padding-left: 20px;
-    width: calc(50% - 18px); /* Each child takes up 50% of available width, accounting for padding */
-    height: 100%; /* Adjust as needed */
+    width: calc(50% - 18px);
+    /* Each child takes up 50% of available width, accounting for padding */
+    height: 100%;
+    /* Adjust as needed */
 }
 
 .hamburger {
     display: flex;
     justify-content: right;
     padding-right: 20px;
-    width: calc(50% - 18px); /* Each child takes up 50% of available width, accounting for padding */
-    height: 100%; /* Adjust as needed */
+    width: calc(50% - 18px);
+    /* Each child takes up 50% of available width, accounting for padding */
+    height: 100%;
+    /* Adjust as needed */
 }
 
-.my_svg {
-    color: red;
-  }
+.nav {
 
+}
+
+
+@media( min-width: 600px) {
+    .logo {
+        width: auto;
+    }
+
+    .mobile_header {
+        display: none;
+    }
+
+    .desktop_header {
+        display: flex;
+    }
+}
