@@ -1,9 +1,9 @@
 export default function Services() {
     return (
-        <div>
-            <div className="section top-section">
+        <>
+            <div className="top-section">
                 Services
             </div>
-        </div>
+        </>
     )
 }

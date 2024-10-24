@@ -1,9 +1,9 @@
 export default function Masters() {
     return (
-        <div>
-            <div className="section top-section">
+        <>
+            <div className="top-section">
                 Masters
             </div>
-        </div>
+        </>
     )
 }

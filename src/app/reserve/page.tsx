@@ -1,9 +1,9 @@
 export default function Reserve() {
     return (
-        <div>
-            <div className="section top-section">
+        <>
+            <div className="top-section">
                 Reserve
             </div>
-        </div>
+        </>
     )
 }

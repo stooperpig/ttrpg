@@ -21,6 +21,7 @@
 .desktop_header {
     display: none;
     flex-direction: row;
+    align-items: center;
 }
 
 .logo {
@@ -28,6 +29,7 @@
     justify-content: left;
     padding-left: 20px;
     width: calc(50% - 18px);
+    align-items: center;
     /* Each child takes up 50% of available width, accounting for padding */
     height: 100%;
     /* Adjust as needed */
@@ -43,8 +45,16 @@
     /* Adjust as needed */
 }
 
-.nav {
+/* Malve Studio Logo Text: 18pt */
+.studio_logo_text {
+    font-family: "garamond-premier-pro", serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 10pt;
+}
 
+.nav {
+    margin-left: 20px;
 }
 
 

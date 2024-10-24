@@ -1,9 +1,9 @@
 export default function ContactUs() {
     return (
-        <div>
-            <div className="section top-section">
+        <>
+            <div className="top-section">
                 Contact Us
             </div>
-        </div>
+        </>
     )
 }

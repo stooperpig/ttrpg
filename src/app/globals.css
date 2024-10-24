@@ -3,38 +3,30 @@ body {
   margin: 0;
   padding: 0;
   height: 100%;
-  color: rgba(255,240,222,1);
-  background-color: rgba(22,19,20,1);
+  color: rgba(255, 240, 222, 1);
+  background-color: rgba(22, 19, 20, 1);
 }
 
 .main {
-  display:flex;
+  display: flex;
   flex-direction: column;
-  color: rgba(255,240,222,1);
+  color: rgba(255, 240, 222, 1);
 }
 
 .section {
-  border: 1px solid black;
-  padding: 20px 60px 20px 60px;
+  /*border: 1px solid black;*/
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
 
-.top-section {
-  padding-top: 50px;
-}
-
 .cta_button {
-  background-color: rgba(2,184,230,1);
+  background-color: rgba(2, 184, 230, 1);
   text-align: center;
-  padding: 2px 10px 2px 10px;
+  padding: 5px 20px 5px 20px;
   width: fit-content;
-  color: rgba(22,19,20,1);
-  font-family: "garamond-premier-pro", serif;
-  font-weight: 700;
-  font-style: normal;
+  color: rgba(22, 19, 20, 1);
 }
 
 .dice {
@@ -93,11 +85,16 @@ For use on body copy and buttons.
 
 CSS Examples. Your code may be different.
 */
+.cta_button {
+  font-family: "garamond-premier-pro", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
 p {
   font-family: "garamond-premier-pro", serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 18pt;
 }
 
 strong,
@@ -237,50 +234,94 @@ the design images.
 /******************************
 /**       Mobile Sizes       **
 *******************************  
-Minimum Page Left and Page Right padding: 36px;
-
 Logo: 44x44px
 Nav Toggle Button: 44x44px
 Nav Link: 54pt;
 Nav Social Buttons: 44x44px
 
-h1 (page titles, masthead): 48pt
-h2 (internal headline): 32pt
-h3 (subheadline): 24pt
-
-p (body copy, hyperlinks, cta button text): 18pt
-
 small text, labels: 12pt ALL CAPS
 
-CTA button padding: 15px
-
 form text: 24pt
-
-footer copyright: 14pt
 
 DM portrait: Minimum 160px x 250px
 DM Signature: 32pt
 campaign price: 60pt
 ********************************/
 
+.top-section {
+  padding: 80px 36px 40px 36px;
+}
 
-@media( min-width: 600px) {
-/******************************
+/* Minimum Page Left and Page Right padding: 36px */
+.section {
+  padding: 20px 36px 40px 36px;
+}
+
+/* h1 (page titles, masthead): 48pt */
+h1 {
+  font-size: 48pt;
+}
+
+/* h2 (internal headline): 32pt */
+h2 {
+  font-size: 32pt;
+}
+
+/* h3 (subheadline): 24pt */
+h3 {
+  font-size: 24pt;
+}
+
+/* p (body copy, hyperlinks, cta button text): 18pt */
+p {
+  font-size: 18pt;
+}
+
+/* CTA button padding: 15px */
+.cta_button {
+  font-size: 18px;
+}
+
+
+@media(min-width: 600px) {
+  /******************************
 /**       Desktop Sizes      **
 *******************************
-Minimum Page Left and Page Right padding (Excluding DM Slideshow): 60px;
-
 Nav "Sections": Two boxes, 50% width each. Nav links in left box, social icons in right.
 Nav Links: Reflexive, minimum 54pt
 Malve Studio Logo Text: 18pt
 
 Masthead Overlay Width: 33%
-
-h1 (page titles, masthead): 60pt
-h2 (internal headline): 48pt
-h3 (subheadline): 32pt
-
-Emphasized (big) paragraph: 24pt
-Sub (small) paragraph: 18pt
 ******************************* */
+
+  .top-section {
+    padding: 80px 60px 40px 60px;
+  }
+
+  /* Minimum Page Left and Page Right padding (Excluding DM Slideshow): 60px */
+  .section {
+    padding: 20px 60px 40px 60px;
+  }
+
+  /* h1 (page titles, masthead): 60pt */
+  h1 {
+    font-size: 60pt;
+  }
+
+  /* h2 (internal headline): 48pt */
+  h2 {
+    font-size: 48pt;
+  }
+
+  /* h3 (subheadline): 32pt */
+  h3 {
+    font-size: 32pt;
+  }
+
+  /* Emphasized (big) paragraph: 24pt */
+  /* Sub (small) paragraph: 18pt */
+  p {
+    font-size: 18pt;
+  }
+
 }

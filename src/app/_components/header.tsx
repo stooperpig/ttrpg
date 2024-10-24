@@ -16,8 +16,9 @@ export default function Header() {
                 </div>
             </div>
             <div className={styles.desktop_header}>
-                <div className={styles.logo}>
+                <div className={styles.logo}> 
                     <Image src="/MS_Logo_White.svg" alt="My SVG" width={44} height={44} />
+                    <span className={styles.studio_logo_text}>MALVE STUDIOS</span>
                 </div>
                 <div className={styles.nav}><NavBar/></div>
             </div>
