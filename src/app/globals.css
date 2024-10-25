@@ -43,6 +43,13 @@ body {
   background-repeat: no-repeat;
 }
 
+.menu {
+  background-image: url('/MS_MenuBG.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 
 /* 
 Malve Studios // Web Font Package
