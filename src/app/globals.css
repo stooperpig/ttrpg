@@ -266,22 +266,22 @@ campaign price: 60pt
 
 /* h1 (page titles, masthead): 48pt */
 h1 {
-  font-size: 48pt;
+  font-size: 48px;
 }
 
 /* h2 (internal headline): 32pt */
 h2 {
-  font-size: 32pt;
+  font-size: 32px;
 }
 
 /* h3 (subheadline): 24pt */
 h3 {
-  font-size: 24pt;
+  font-size: 24px;
 }
 
 /* p (body copy, hyperlinks, cta button text): 18pt */
 p {
-  font-size: 18pt;
+  font-size: 18px;
 }
 
 /* CTA button padding: 15px */
@@ -312,23 +312,23 @@ Masthead Overlay Width: 33%
 
   /* h1 (page titles, masthead): 60pt */
   h1 {
-    font-size: 60pt;
+    font-size: 60px;
   }
 
   /* h2 (internal headline): 48pt */
   h2 {
-    font-size: 48pt;
+    font-size: 48px;
   }
 
   /* h3 (subheadline): 32pt */
   h3 {
-    font-size: 32pt;
+    font-size: 32px;
   }
 
   /* Emphasized (big) paragraph: 24pt */
   /* Sub (small) paragraph: 18pt */
   p {
-    font-size: 18pt;
+    font-size: 18px;
   }
 
 }

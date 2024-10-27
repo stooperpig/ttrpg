@@ -17,7 +17,7 @@
     font-family: "garamond-premier-pro", serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 36pt;  /* it's suppose to be 54pt */
+    font-size: 48px;  /* it's suppose to be 54pt */
 }
 
 .navLink:hover {
