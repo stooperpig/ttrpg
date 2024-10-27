@@ -1,3 +1,15 @@
 .social_media {
-    border: 1px solid grey;
+    margin-left:10px;
+}
+
+.social_media_buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap:10px;
+}
+
+.social_media_button {
+    background-color: orange;
+    height: 44px;
+    width: 44px;
 }

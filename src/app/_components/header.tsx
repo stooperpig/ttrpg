@@ -28,8 +28,8 @@ export default function Header() {
                         </div>
                     </div>
                     <div className={styles.mobile_header_open_bottom}>
-                        <div><MobileNav clickHandler={toggleMobileNav}/></div>
-                        <div><SocialMedia/></div>
+                        <div className={styles.mobile_header_open_bottom_left}><MobileNav clickHandler={toggleMobileNav}/></div>
+                        <div className={styles.mobile_header_open_bottom_right}><SocialMedia/></div>
                     </div>
                 </div>
             )

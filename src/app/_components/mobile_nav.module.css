@@ -1,5 +1,9 @@
 .mobile_nav {
-    border: 1px solid grey;
+}
+
+.mobile_nav ul li hr {
+    margin-left: 10px;
+    border: none; border-top: 1px dashed rgba(112,91,57,1); color: rgba(112,91,57,1); background-color: #000; height: 1px;
 }
 
 .mobile_nav ul {
@@ -12,20 +16,16 @@
     color: rgba(112,91,57,1);
     text-decoration: none;
     font-size: 16px;
-    padding: 10px;
+    padding: 0px 10px 0px 10px;
     transition: all 0.3s ease;
     font-family: "garamond-premier-pro", serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 48px;  /* it's suppose to be 54pt */
+    font-size: 36px;  /* it's suppose to be 54pt */
 }
 
 .navLink:hover {
     color: rgba(2,184,230,1);
-    text-decoration: underline;
-    text-decoration-color: rgba(2,184,230,1);
-    text-underline-offset: 5px;
-    text-decoration-thickness: 2px;
 }
 
 /* Active link styling */

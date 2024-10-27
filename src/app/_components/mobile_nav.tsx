@@ -40,6 +40,7 @@ export default function MobileNav(props: PropTypes) {
                             <Link href={pagePath} className={`${styles.navLink} ${isActive ? styles.active : ''}`}>
                                 {link.name}
                             </Link>
+                            <hr/>
                         </li>
                     );
                 })}
