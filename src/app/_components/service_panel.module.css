@@ -1,4 +1,5 @@
-.service {
+.service_panel {
     background-color: orange;
+    width: 305px; 
     border: 1px dotted white;
 }

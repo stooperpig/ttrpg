@@ -24,7 +24,7 @@
     position: relative;
     position: absolute;
     top: 15%;
-    left: 10%;
+    left: 20px;
     z-index: 10;
     /* Ensure content is on top of the video */
     color: white;
@@ -37,4 +37,7 @@
 }
 
 @media( min-width: 600px) {
+    .video_text {
+        left: 36px;
+    }
 }

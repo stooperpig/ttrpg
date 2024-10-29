@@ -10,6 +10,14 @@ import SocialMedia from "./social_media";
 export default function Header() {
     const [showMobileNav, setShowMobalNav] = useState<boolean>(false);
 
+    const links = [
+        { name: 'Home', url: '/' },
+        //{ name: 'Masters', url: '/masters' },
+        { name: 'Services', url: '/services' },
+        //{ name: 'Reserve a GM', url: '/reserve' },
+        { name: 'Contact Us', url: '/contact-us' }
+    ];
+
     const toggleMobileNav = () => {
         setShowMobalNav(!showMobileNav);
     }
@@ -28,8 +36,8 @@ export default function Header() {
                         </div>
                     </div>
                     <div className={styles.mobile_header_open_bottom}>
-                        <div className={styles.mobile_header_open_bottom_left}><MobileNav clickHandler={toggleMobileNav}/></div>
-                        <div className={styles.mobile_header_open_bottom_right}><SocialMedia/></div>
+                        <div className={styles.mobile_header_open_bottom_left}><MobileNav clickHandler={toggleMobileNav} links={links} /></div>
+                        <div className={styles.mobile_header_open_bottom_right}><SocialMedia /></div>
                     </div>
                 </div>
             )
@@ -57,7 +65,7 @@ export default function Header() {
                     <Image src="/MS_Logo_White.svg" alt="My SVG" width={44} height={44} />
                     <span className={styles.studio_logo_text}>MALVE STUDIOS</span>
                 </div>
-                <div className={styles.desktop_nav}><NavBar /></div>
+                <div className={styles.desktop_nav}><NavBar links={links} /></div>
             </div>
 
         </div>

@@ -2,22 +2,19 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import styles from './nav_bar.module.css';
+import { NavLink } from '../_types/types';
 
-export default function NavBar() {
+interface PropTypes {
+    links: NavLink[]
+}
+
+export default function NavBar(props: PropTypes) {
     const pathname = usePathname();  // Get the current pathname
-
-    const links = [
-        { name: 'Home', url: '/' },
-        { name: 'Masters', url: '/masters' },
-        { name: 'Services', url: '/services' },
-        { name: 'Reserve a GM', url: '/reserve' },
-        { name: 'Contact Us', url: '/contact-us' }
-    ];
 
     return (
         <nav className={styles.nav}>
             <ul className={styles.navList}>
-                {links.map((link, index) => {
+                {props.links.map((link, index) => {
                     const pagePath = link.url;
                     const isActive = pathname === pagePath;
                     console.log(`pathname: ${pathname} pagePath: ${pagePath}`);
