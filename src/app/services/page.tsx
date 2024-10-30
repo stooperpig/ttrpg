@@ -30,12 +30,18 @@ export default function Services() {
             <div className="top-section">
                 <h1>Services</h1>
                 <p>Multiple pricing/service blocks (row flow with wrapping: 2 across on desktop and single on mobile)</p>
-                <p>See comp</p>
+            </div>
+            <div className="section">
                 <div className={styles.services_list}>
-                {services.map((service: Service, index: number) => {
-                    return( <ServicePanel key={index} service={service}/> )
-                })}
+                    {services.map((service: Service, index: number) => {
+                        return (<ServicePanel key={index} service={service} />)
+                    })}
                 </div>
+            </div>
+            <div className="section">List of Games?</div>
+            <div className="section">
+                List of Future offering?<br /><br />
+                <div className="cta_button">Contact Us</div>
             </div>
         </>
     )

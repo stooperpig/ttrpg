@@ -1,3 +1,6 @@
-.service_list {
-    
+.services_list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 40px;
 }

@@ -3,7 +3,11 @@
 
 .mobile_nav ul li hr {
     margin-left: 10px;
-    border: none; border-top: 1px dashed rgba(112,91,57,1); color: rgba(112,91,57,1); background-color: #000; height: 1px;
+    border: none; 
+    border-top: 1px dashed rgba(112,91,57,1);
+    color: rgba(112,91,57,1);
+    background-color: #000;
+    height: 1px;
 }
 
 .mobile_nav ul {

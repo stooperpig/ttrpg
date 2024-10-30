@@ -1,5 +1,42 @@
 .service_panel {
-    background-color: orange;
+    display: flex;
+    flex-direction: column;
     width: 305px; 
     border: 1px dotted white;
+    text-align: center;
+    align-items: center;
+    padding-bottom: 40px;
+}
+
+.hr_container {
+    width: 100%;
+}
+
+.service_panel hr {
+    margin: 20px 20px 20px 20px; 
+    border: none; 
+    border-top: 1px dashed rgba(112,91,57,1); 
+    color: rgba(112,91,57,1); 
+    background-color: #000; 
+    height: 1px;
+}
+
+/* campaign price: 60pt */
+.campaign_price {
+    font-size: 20px; /* Main font size for the number */
+    display: inline-flex;
+    align-items: flex-start;
+    font-size: 60px;
+}
+
+.campaign_dollar_sign {
+    font-size: 30px; /* Smaller font size for the dollar sign */
+    line-height: 1; /* Adjusts spacing within the dollar sign */
+    margin-right: 2px; /* Adds slight space between the dollar sign and number */
+    transform: translateY(25%); /* Moves the dollar sign up */
+    color: rgba(112,91,57,1);
+}
+
+.campaign_price_text {
+    color: rgba(112,91,57,1);
 }
