@@ -29,7 +29,7 @@ export default function Services() {
         <>
             <div className="top-section">
                 <h1>Services</h1>
-                <p>Multiple pricing/service blocks (row flow with wrapping: 2 across on desktop and single on mobile)</p>
+                <p>Need verbage for this page</p>
             </div>
             <div className="section">
                 <div className={styles.services_list}>

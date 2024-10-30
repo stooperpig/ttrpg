@@ -13,13 +13,15 @@ export default function ServicePanel(props: PropTypes) {
             <div className={styles.campaign_price}><span className={styles.campaign_dollar_sign}>$</span>{props.service.price}</div>
             <div className={styles.campaign_price_text}>{props.service.priceText}</div>
             <div className={styles.hr_container}><hr/></div>
+            <div className={styles.campaign_description}>
             {props.service.description.map((text: string, index: number) => {
                 return(
-                    <div key={index}>{text}</div>
+                    <><span key={index}>{text}</span><br/></>
                 )
             })}
+            </div>
             <br/>
-            <div className="cta_button">Contact Us</div>
+            <div className="cta_button">{props.service.cta}</div>
         </div>
     )
 }

@@ -40,3 +40,10 @@
 .campaign_price_text {
     color: rgba(112,91,57,1);
 }
+
+.campaign_description {
+    font-family: "garamond-premier-pro", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+}
