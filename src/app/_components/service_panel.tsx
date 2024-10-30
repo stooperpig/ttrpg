@@ -8,7 +8,7 @@ interface PropTypes {
 
 export default function ServicePanel(props: PropTypes) {
     return(
-        <div className={styles.service_panel} key={props.key}>
+        <div className={`${styles.service_panel} `} key={props.key}>
             <h3>{props.service.title}</h3>
             <div className={styles.campaign_price}><span className={styles.campaign_dollar_sign}>$</span>{props.service.price}</div>
             <div className={styles.campaign_price_text}>{props.service.priceText}</div>

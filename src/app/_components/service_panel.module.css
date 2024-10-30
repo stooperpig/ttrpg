@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     width: 305px; 
-    border: 1px dotted white;
+    border: 1px dashed rgba(112,91,57,1);
     text-align: center;
     align-items: center;
     padding-bottom: 40px;
