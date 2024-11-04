@@ -2,8 +2,8 @@
 
 import styles from "./header.module.css";
 import Image from 'next/image'
-import NavBar from "./nav_bar";
-import MobileNav from "./mobile_nav";
+import NavBar from "./nav/nav_bar";
+import MobileNav from "./nav/mobile_nav";
 import { useState } from "react";
 import SocialMedia from "./social_media";
 

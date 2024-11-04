@@ -1,7 +1,7 @@
 import { usePathname, useRouter } from 'next/navigation';
 import Link from 'next/link';
 import styles from './mobile_nav.module.css'
-import { NavLink } from '../_types/types';
+import { NavLink } from '../../_types/types';
 
 interface PropTypes {
     links: NavLink[]
