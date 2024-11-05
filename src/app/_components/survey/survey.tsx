@@ -1,6 +1,7 @@
 import styles from './survey.module.css';
 
 interface SurveyQuestion {
+	id: string
 	question: string
 	hint?: string
 	type: string
@@ -8,6 +9,7 @@ interface SurveyQuestion {
 }
 
 const surveyQuestions: SurveyQuestion[] = [{
+	"id": "q1",
 	"question": "What forms of media do you prefer?",
 	"hint": "(Select as many as you like)",
 	"type": "checkbox",
@@ -15,6 +17,7 @@ const surveyQuestions: SurveyQuestion[] = [{
 		"Film", "Television", "Social", "Written Word", "Music", "Art", "Interactive", "All of the above"
 	]
 }, {
+	"id": "q2",
 	"question": "What does relaxing look like to you?",
 	"hint": "(Select as many as you like)",
 	"type": "checkbox",
@@ -22,6 +25,7 @@ const surveyQuestions: SurveyQuestion[] = [{
 		"Staying home in the quiet", "Going into nature", "Going out to eat or drink", "Attending sports events", "Attending a performance", "All of the above"
 	]
 }, {
+	"id": "q3",
 	"question": "Are you prone to solitude or company?",
 	"hint": "(Select up to 1)",
 	"type": "radio",
@@ -29,6 +33,7 @@ const surveyQuestions: SurveyQuestion[] = [{
 		"Solitude", "Company", "50/50",
 	]
 }, {
+	"id": "q4",
 	"question": "What genre of media do you prefer?",
 	"hint": "(Select as many as you like)",
 	"type": "checkbox",
@@ -36,6 +41,7 @@ const surveyQuestions: SurveyQuestion[] = [{
 		"Action", "Fantasy", "Sci Fi", "Noir", "Thriller", "Modern", "Dystopian"
 	]
 }, {
+	"id": "q5",
 	"question": "What do you expect most out of a TTRPG?",
 	"hint": "(Select up to 1)",
 	"type": "radio",
@@ -43,6 +49,7 @@ const surveyQuestions: SurveyQuestion[] = [{
 		"Roleplay", "Combat", "Exploration"
 	]
 }, {
+	"id": "q6",
 	"question": "How do you prefer to play?",
 	"hint": "(Select up to 1)",
 	"type": "radio",
@@ -50,6 +57,7 @@ const surveyQuestions: SurveyQuestion[] = [{
 		"Online", "In-Person", "Blended"
 	]
 }, {
+	"id": "q7",
 	"question": "What about playing a TTRPG interests you the most?",
 	"hint": "(Select as many as you like)",
 	"type": "checkbox",
@@ -57,9 +65,11 @@ const surveyQuestions: SurveyQuestion[] = [{
 		"Playing with friends", "Going on fantastical adventures", "Unique challenges and puzzles", "Interactive storylines", "Combat and Boss battles", "All of the Above"
 	]
 }, {
+	"id": "q8",
 	"question": "Would you mind giving us your email so we can stay in touch?",
 	"type": "input",
 }, {
+	"id": "q9",
 	"question": "What time zone are you in?",
 	"hint": "(Select as many as you like)",
 	"type": "checkbox",
@@ -67,9 +77,11 @@ const surveyQuestions: SurveyQuestion[] = [{
 		"CDT", "EST", "MST", "PDT"
 	]
 }, {
+	"id": "q10",
 	"question": "What is your name?",
 	"type": "input"
 }, {
+	"id": "q11",
 	"question": "What are your pronouns?",
 	"hint": "(Select up to 1)",
 	"type": "radio",
@@ -77,6 +89,7 @@ const surveyQuestions: SurveyQuestion[] = [{
 		"She/Her", "He/Him", "They/Them", "Other"
 	]
 }, {
+	"id": "q12",
 	"question": "Please enter your Discord handle here. We will send you an invite to our private company server.",
 	"type": "input"
 }
@@ -99,7 +112,7 @@ export default function Survey() {
 
 		switch (surveyQuestion.type) {
 			case "radio":
-				return renderRadios(surveyQuestion.question, surveyQuestion.options);
+				return renderRadios(surveyQuestion.id, surveyQuestion.options);
 			case "checkbox":
 				return renderCheckboxes(surveyQuestion.options);
 		}
@@ -107,7 +120,7 @@ export default function Survey() {
 
 	const renderInput = (surveyQuestion: SurveyQuestion) => {
 		return (
-			<><input className={styles.input} type="text"/><br /></>
+			<><input className={styles.input} name={surveyQuestion.id} type="text"/><br /></>
 		)
 	}
 

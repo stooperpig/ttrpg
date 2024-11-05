@@ -2,7 +2,7 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import styles from './nav_bar.module.css';
-import { NavLink } from '../_types/types';
+import { NavLink } from '../../_types/types';
 
 interface PropTypes {
     links: NavLink[]
