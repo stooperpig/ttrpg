@@ -1,4 +1,4 @@
-import './survey.css';
+import styles from './survey.module.css';
 
 interface SurveyQuestion {
 	question: string
@@ -86,7 +86,7 @@ export default function Survey() {
 
 	const renderHint = (hint: string | undefined) => {
 		if (hint) {
-			return <>{hint}<br /></>
+			return <div className={styles.hint}><i>{hint}</i></div>
 		} else {
 			return null;
 		}
@@ -107,7 +107,7 @@ export default function Survey() {
 
 	const renderInput = (surveyQuestion: SurveyQuestion) => {
 		return (
-			<><input type="text"/><br /></>
+			<><input className={styles.input} type="text"/><br /></>
 		)
 	}
 
@@ -133,33 +133,33 @@ export default function Survey() {
 
 	const renderCheckbox = (option: string, index: number) => {
 		return (
-			<div key={index}><input type="checkbox" id={option} name={option} value={option}/>{option}</div>
+			<div className={styles.checkbox} key={index}><input type="checkbox" id={option} name={option} value={option}/><p>{option}</p></div>
 		)
 	}
 
 	const renderRadio = (name: string, option: string, index: number) => {
 		return (
-			<div key={index}><input type="radio" name={name} value={option}/>{option}</div>
+			<div className={styles.checkbox} key={index}><input type="radio" name={name} value={option}/>{option}</div>
 		)
 	}
 
 	return (
-		<div className="survey">
+		<div className={styles.survey}>
 			<h2>Player Response Form</h2>
 			<p>This form helps us to match you to your perfect GM (or closest we can get).
 				It will help us identify your play style and expectations when coming to a table.
 			</p>
 			{surveyQuestions.map((surveyQuestion: SurveyQuestion, index: number) => {
 				return (
-					<div className="question" key={index}>
-						{surveyQuestion.question}<br />
+					<div className={styles.question} key={index}>
+						<div className={styles.question_text}>{surveyQuestion.question}</div>
 						{renderHint(surveyQuestion.hint)}
 						{surveyQuestion.type === 'input' ? renderInput(surveyQuestion) : renderOptions(surveyQuestion)}
 					</div>
 				)
 			})}
 			<br />
-			<button>Submit</button><br />
+			<button>Submit</button><br /><br />
 			<i>Never submit sensitive personal information, like passwords.</i>
 		</div>
 	)

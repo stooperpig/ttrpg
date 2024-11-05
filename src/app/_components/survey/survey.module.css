@@ -1,0 +1,42 @@
+.survey {
+    max-width: 600px;
+}
+
+.question {
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.question_text {
+    font-size: 24px;
+    font-weight: 700;
+    padding: 6px 0px 6px 0px;
+}
+
+.hint {
+    font-style: italic;
+    color: rgba(150, 150, 150, 1);
+    margin: 4px 0px 12px 0px;
+}
+
+.checkbox {
+    margin: 4px 0px 4px 0px;
+}
+
+.checkbox p {
+    display: inline-block;
+    margin: 0px 0px 0px 4px;
+}
+
+.radio {
+    margin: 4px 0px 4px 0px;
+}
+
+.radio p {
+    display: inline-block;
+    margin: 0px 0px 0px 4px;
+}
+
+.input {
+    width: 100%;
+}
