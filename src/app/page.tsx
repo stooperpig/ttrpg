@@ -26,22 +26,26 @@ export default function Home() {
         </div>
       </div>
       <div className="section">
-        <h1>Skilled Game Masters bring your campaign to life</h1>
+        <h2>Skilled Game Masters bring your campaign to life</h2>
         <p>Whether your game of choice is Dungeons & Dragons, Pathfinder, or Call of Cthulhu, <b className="tan">Malve Studios</b> has <b className="tan">hand-picked</b> a selection of expert
           Dungeon Masters to conduct your story-driven games.</p>
         <br />
         <div className="cta_button">View Our Masters</div>
       </div>
       <div className="section dice">
-        <h1>Play Anywhere. Full Stop.</h1>
-        <p>Experience <b className="tan">tailor-made</b>, remote delves with your adventuring party from the comfort of home.</p>
-        <p>Our include <b className="tan">Virutal Table Top (VTT)</b> service ensures seamless global connectivity 
-          and multitudes of game-enhancing tools.</p>
-        <br />
-        <div className="cta_button">Learn More</div>
+        <div className={`section ${styles.nested_section}`}>
+          <h2>Play Anywhere. Full Stop.</h2>
+          <p>Experience <b className="tan">tailor-made</b>, remote delves with your adventuring party from the comfort of home.</p>
+          <p>Our include <b className="tan">Virutal Table Top (VTT)</b> service ensures seamless global connectivity
+            and multitudes of game-enhancing tools.</p>
+          <br />
+          <div className={styles.bottom_cta_container}>
+            <div className="cta_button">Learn More</div>
+          </div>
+        </div>
       </div>
       <div className="section petal">
-        <h1>Master Your Games</h1>
+        <h2>Master Your Games</h2>
         <p><b className="tan">Malve Studios</b> has the <b className="tan">perfect DM</b> to evolve your next night.</p>
         <p>Still unconvinced? <b className="tan">Reach out to use directly.</b></p>
         <br />

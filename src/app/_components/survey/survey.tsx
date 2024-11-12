@@ -120,7 +120,7 @@ export default function Survey() {
 
 	const renderInput = (surveyQuestion: SurveyQuestion) => {
 		return (
-			<><input className={styles.input} name={surveyQuestion.id} type="text"/><br /></>
+			<><input className={styles.input} name={surveyQuestion.id} type="text" /><br /></>
 		)
 	}
 
@@ -146,13 +146,13 @@ export default function Survey() {
 
 	const renderCheckbox = (option: string, index: number) => {
 		return (
-			<div className={styles.checkbox} key={index}><input type="checkbox" id={option} name={option} value={option}/><p>{option}</p></div>
+			<div className={styles.checkbox} key={index}><input type="checkbox" id={option} name={option} value={option} /><p>{option}</p></div>
 		)
 	}
 
 	const renderRadio = (name: string, option: string, index: number) => {
 		return (
-			<div className={styles.checkbox} key={index}><input type="radio" name={name} value={option}/>{option}</div>
+			<div className={styles.checkbox} key={index}><input type="radio" name={name} value={option} />{option}</div>
 		)
 	}
 

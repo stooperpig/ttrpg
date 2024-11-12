@@ -32,11 +32,30 @@
     /*border: 1px solid black;*/
 }
 
+.nested_section {
+    background-color: rgba(22, 19, 20, .85);
+    margin: 50px 0px 50px 0px;
+    padding: 0px 20px 0px 20px;
+  }
+
+.nested_section h2 {
+    margin-top: -20px;
+}
+
+.bottom_cta_container {
+    border: 1px solid red;
+    height: 20px;
+}
+
 .masthead_text {
     /*font-size: 32pt;*/
 }
 
 @media( min-width: 600px) {
+    .nested_section h2 {
+        margin-top: -30px;
+    }
+
     .video_text {
         left: 36px;
     }
