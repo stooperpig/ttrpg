@@ -4,13 +4,13 @@ import styles from './page.module.css';
 
 export default function Services() {
     const services: Service[] = [{
-        title: 'Drop-In Campaign',
-        price: 40,
+        title: 'Long-Term Campaign',
+        price: 35,
         priceText: 'PER SEAT',
         description: [
             '4 Hour Adventure',
             'Virtual Table Top Service',
-            'DM Earns $35/seat'
+            'DM Earns $30/seat'
         ],
         cta: 'Book Your Adventure'
     }, {
