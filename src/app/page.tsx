@@ -30,17 +30,18 @@ export default function Home() {
         <p>Whether your game of choice is Dungeons & Dragons, Pathfinder, or Call of Cthulhu, <b className="tan">Malve Studios</b> has <b className="tan">hand-picked</b> a selection of expert
           Dungeon Masters to conduct your story-driven games.</p>
         <br />
-        <div className="cta_button">View Our Masters</div>
+       
+       <div className="cta_button">View Our Masters</div>
       </div>
       <div className="section dice">
         <div className={`section ${styles.nested_section}`}>
           <h2>Play Anywhere. Full Stop.</h2>
-          <p>Experience <b className="tan">tailor-made</b>, remote delves with your adventuring party from the comfort of home.</p>
-          <p>Our include <b className="tan">Virutal Table Top (VTT)</b> service ensures seamless global connectivity
+          <p>Experience <b className="blue">tailor-made</b>, remote delves with your adventuring party from the comfort of home.</p>
+          <p>Our include <b className="blue">Virutal Table Top (VTT)</b> service ensures seamless global connectivity
             and multitudes of game-enhancing tools.</p>
           <br />
           <div className={styles.bottom_cta_container}>
-            <div className="cta_button">Learn More</div>
+            {/* <div className="cta_button">Learn More</div> */}
           </div>
         </div>
       </div>
