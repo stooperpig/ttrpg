@@ -39,7 +39,7 @@ export default function Services() {
                     })}
                 </div>
             </div>
-            <div className="section"> <h3 className={styles.h3}>Here's what we offer:</h3>
+            <div className="section"> <h3 className={styles.h3}>Here&aposs what we offer:</h3>
                 <ul>
                     <li>Dungeons and Dragons 5th Edition (2014 and 2024 rules)</li>
                     <li>Pathfinder 1e and 2e</li>
