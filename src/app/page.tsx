@@ -42,6 +42,7 @@ export default function Home() {
             and multitudes of game-enhancing tools.</p>
           <br />
           <div className={styles.bottom_cta_container}>
+          <Link href="/services"></Link>
             <div className="cta_button">Learn More</div>
           </div>
         </div>
@@ -51,6 +52,7 @@ export default function Home() {
         <p><b className="tan">Malve Studios</b> has the <b className="tan">perfect DM</b> to evolve your next night.</p>
         <p>Still unconvinced? <b className="tan">Reach out to use directly.</b></p>
         <br />
+        <Link href="/contact-us"></Link>
         <div className="cta_button">Contact Us</div>
       </div>
     </div>
