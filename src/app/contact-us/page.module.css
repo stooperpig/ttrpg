@@ -1,3 +1,7 @@
 .link:visited {
     color: white;
 }
+
+.link {
+    text-decoration: underline;
+}

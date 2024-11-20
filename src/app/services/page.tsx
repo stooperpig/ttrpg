@@ -41,7 +41,7 @@ export default function Services() {
             <div className="section">List of Games?</div>
             <div className="section">
                 List of Future offering?<br /><br />
-                <div className="cta_button">Contact Us</div>
+                {/* <div className="cta_button">Contact Us</div> */}
             </div>
         </>
     )

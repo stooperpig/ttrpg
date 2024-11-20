@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { Service } from '../_types/types'
 import styles from './service_panel.module.css'
 
@@ -21,7 +22,7 @@ export default function ServicePanel(props: PropTypes) {
             })}
             </div>
             <br/>
-            <div className="cta_button">{props.service.cta}</div>
+            <Link href="/contact-us#book"><div className="cta_button">{props.service.cta}</div></Link>
         </div>
     )
 }
