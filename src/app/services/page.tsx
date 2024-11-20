@@ -29,7 +29,7 @@ export default function Services() {
         <>
             <div className="top-section">
                 <h1>Services</h1>
-                <p>Need verbage for this page</p>
+                <p>Malve Studios GMs offer a variety of TTRPGs for you to explore. No matter the system of playstyle, we know a guy that can keep your adventures running smoothly.</p>
             </div>
             <div className="section">
                 <div className={styles.services_list}>
