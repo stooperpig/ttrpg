@@ -22,6 +22,7 @@ export default function Home() {
         </video>
         <div className={styles.video_text}>
           <h1 className={styles.masthead_text}>Curated Masters for your Games</h1>
+          <Link href="/contact-us"></Link>
           <div className="cta_button">Reserve your GM</div>
         </div>
       </div>
@@ -31,7 +32,7 @@ export default function Home() {
           Dungeon Masters to conduct your story-driven games.</p>
         <br />
        
-       <div className="cta_button">View Our Masters</div>
+       {/* <div className="cta_button">View Our Masters</div> */}
       </div>
       <div className="section dice">
         <div className={`section ${styles.nested_section}`}>
@@ -41,7 +42,7 @@ export default function Home() {
             and multitudes of game-enhancing tools.</p>
           <br />
           <div className={styles.bottom_cta_container}>
-            {/* <div className="cta_button">Learn More</div> */}
+            <div className="cta_button">Learn More</div>
           </div>
         </div>
       </div>
