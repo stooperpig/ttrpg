@@ -35,11 +35,11 @@ export default function Services() {
                 Malve Studios GMs offer a variety of TTRPGs for you to explore. No matter the system of playstyle, we know a guy that can keep your adventures running smoothly.
                 <div className={styles.services_list}>
                     {services.map((service: Service, index: number) => {
-                        return (<ServicePanel keyValue={index} service={service} />)
+                        return (<ServicePanel key={index} index={index} service={service} />)
                     })}
                 </div>
             </div>
-            <div className="section"> <h3 className={styles.h3}>Here's what we offer:</h3>
+            <div className="section"> <h3 className={styles.h3}>Here&apos;s what we offer:</h3>
                 <ul>
                     <li>Dungeons and Dragons 5th Edition (2014 and 2024 rules)</li>
                     <li>Pathfinder 1e and 2e</li>
