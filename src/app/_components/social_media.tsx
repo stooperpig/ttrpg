@@ -7,8 +7,7 @@ export default function SocialMedia() {
         'MS_Social_Discord.svg',
         'MS_Social_Email.svg',
         'MS_Social_Facebook.svg',
-        'MS_Social_Reddit.svg',
-        'MS_Social_X.svg'
+        
     ];
 
     return (

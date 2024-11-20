@@ -4,4 +4,9 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 40px;
+    margin-top: 30px;
+}
+
+.h3 {
+    margin-bottom: 0px;
 }

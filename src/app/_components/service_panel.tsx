@@ -4,12 +4,12 @@ import styles from './service_panel.module.css'
 
 interface PropTypes {
     service: Service
-    key: number
+    keyValue: number
 }
 
 export default function ServicePanel(props: PropTypes) {
     return(
-        <div className={`${styles.service_panel} `} key={props.key}>
+        <div className={`${styles.service_panel} `} key={props.keyValue}>
             <h3>{props.service.title}</h3>
             <div className={styles.campaign_price}><span className={styles.campaign_dollar_sign}>$</span>{props.service.price}</div>
             <div className={styles.campaign_price_text}>{props.service.priceText}</div>
@@ -17,7 +17,7 @@ export default function ServicePanel(props: PropTypes) {
             <div className={styles.campaign_description}>
             {props.service.description.map((text: string, index: number) => {
                 return(
-                    <><span key={index}>{text}</span><br/></>
+                    <div key={index}>{text}</div>
                 )
             })}
             </div>
