@@ -6,6 +6,7 @@ import NavBar from "./nav/nav_bar";
 import MobileNav from "./nav/mobile_nav";
 import { useState } from "react";
 import SocialMedia from "./social_media";
+import Link from "next/link";
 
 export default function Header() {
     const [showMobileNav, setShowMobalNav] = useState<boolean>(false);
@@ -28,8 +29,8 @@ export default function Header() {
                 <div className={`${styles.mobile_header_open} menu`}>
                     <div className={styles.mobile_header_open_top}>
                         <div className={styles.logo}>
-                            <Image src="/MS_Logo_White.svg" alt="My SVG" width={44} height={44} />
-                            <span className={styles.studio_logo_text}>MALVE STUDIOS</span>
+                            <Link href="/"><Image src="/MS_Logo_White.svg" alt="My SVG" width={44} height={44} />
+                            <span className={styles.studio_logo_text}>MALVE STUDIOS</span></Link>
                         </div>
                         <div className={styles.hamburger} onClick={toggleMobileNav}>
                             <img className={styles.my_svg} src="/MS_MenuButton.svg" alt="My SVG" width={44} height={44} />
@@ -45,7 +46,7 @@ export default function Header() {
             return (
                 <div className={styles.mobile_header_closed}>
                     <div className={styles.logo}>
-                        <Image src="/MS_Logo_White.svg" alt="My SVG" width={44} height={44} />
+                    <Link href="/"> <Image src="/MS_Logo_White.svg" alt="My SVG" width={44} height={44} /> </Link>
                     </div>
                     <div className={styles.hamburger} onClick={toggleMobileNav}>
                         <img className={styles.my_svg} src="/MS_MenuButton.svg" alt="My SVG" width={44} height={44} />
@@ -62,7 +63,7 @@ export default function Header() {
             </div>
             <div className={styles.desktop_header}>
                 <div className={styles.logo}>
-                    <Image src="/MS_Logo_White.svg" alt="My SVG" width={44} height={44} />
+                <Link href="/"> <Image src="/MS_Logo_White.svg" alt="My SVG" width={44} height={44} /> </Link>
                     <span className={styles.studio_logo_text}>MALVE STUDIOS</span>
                 </div>
                 <div className={styles.desktop_nav}><NavBar links={links} /></div>
