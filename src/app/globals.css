@@ -41,6 +41,13 @@ a {
   background-repeat: no-repeat;
 }
 
+.dice_chat {
+  background-image: url('/MS_Dice_Chat.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 .petal {
   background-image: url('/MS_MalvePedal_BG.webp');
   background-size: cover;
