@@ -12,7 +12,6 @@ export default function SocialMedia() {
 
     return (
         <div className={styles.social_media}>
-            <p>Social Media</p>
             <div className={styles.social_media_buttons}>
                 {buttons.map((button, index) => (
                     <Link href={button.url} key={index} target="_blank" rel="noopener noreferrer">

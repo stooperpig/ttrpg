@@ -1,11 +1,12 @@
 .social_media {
-    margin-left:10px;
+    margin-bottom: 10px;
 }
 
 .social_media_buttons {
     display: flex;
     flex-wrap: wrap;
     gap:10px;
+    justify-content: center;
 }
 
 .social_media_button {
