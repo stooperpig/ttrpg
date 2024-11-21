@@ -1,23 +1,25 @@
 import styles from './social_media.module.css';
-import Image from 'next/image'
+import Image from 'next/image';
+import Link from 'next/link';
 
 export default function SocialMedia() {
     const buttons = [
-        'MS_Social_Blusky.svg',
-        'MS_Social_Discord.svg',
-        'MS_Social_Email.svg',
-        'MS_Social_Facebook.svg',
-        
+        { src: 'MS_Social_Blusky.svg', url: 'https://bsky.app/profile/malvestudios.bsky.social/' },
+        { src: 'MS_Social_Discord.svg', url: 'https://discord.gg/9JnmWbWXZA' },
+        { src: 'MS_Social_Email.svg', url: 'mailto:business@malvestudios.com' }, // Email link
+        { src: 'MS_Social_Facebook.svg', url: 'https://www.facebook.com/profile.php?id=61567293238716' },
     ];
 
     return (
         <div className={styles.social_media}>
             <p>Social Media</p>
             <div className={styles.social_media_buttons}>
-                {buttons.map((value: string, index: number) => {
-                    return <Image src={value} key={index} alt="" width={44} height={44} />
-                })}
+                {buttons.map((button, index) => (
+                    <Link href={button.url} key={index} target="_blank" rel="noopener noreferrer">
+                        <Image src={button.src} alt={`Link to ${button.url}`} width={44} height={44} />
+                    </Link>
+                ))}
             </div>
         </div>
-    )
+    );
 }
