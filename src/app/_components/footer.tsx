@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import styles from './footer.module.css'
 import Image from 'next/image'
-import NavBar from './nav/nav_bar';
 
 export default function Footer() {
     return (
