@@ -24,7 +24,7 @@ export default function ContactUs() {
                 </div>
 
                 <div className={styles.survey}>
-                    Know what you want from us? Fill out this <Link className={styles.link} href="/player-response">form</Link>
+                    Know what you want from us? Fill out this <Link className={styles.link} href="https://malvestudios.notion.site/12d1b67a744e8028ab50fd2725091aff">form</Link>
                 </div>
             </div>
         </>
