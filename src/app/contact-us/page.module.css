@@ -40,9 +40,9 @@
     height: 130px;
     padding: 80px 0px 0px 60px;
 
-    background-size: auto;
+    background-size: 100% auto;
     /* Keeps the image at its original size */
-    background-position: top left;
+    background-position: 0px -525px;
     /* Aligns the image to the top-left corner */
     background-repeat: no-repeat;
     /* Ensures the image doesn't repeat */

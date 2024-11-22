@@ -5,7 +5,7 @@ import Footer from "./_components/footer";
 
 
 export const metadata: Metadata = {
-  title: "TTRPG",
+  title: "Malve Studios",
   description: "",
 };
 
