@@ -23,8 +23,9 @@ export default function ContactUs() {
                     </div>
                 </div>
 
-                <div className={styles.survey}>Know what you want from us? Fill out this <Link className={styles.link} href="/player-response">form</Link></div>
-
+                <div className={styles.survey}>
+                    Know what you want from us? Fill out this <Link className={styles.link} href="/player-response">form</Link>
+                </div>
             </div>
         </>
     )
