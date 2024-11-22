@@ -17,7 +17,7 @@ export default function ContactUs() {
 
 
                 <div id="business" className={styles.business}>
-                    Wanna talk partnerships, opportunites, or join the big leagues? This the email to use. Keep it classy.<br />
+                    Wanna talk partnerships, opportunites, or join the big leagues? This is the email to use. Keep it classy.<br />
                     <div className={styles.email}>
                         Email: <a href="mailto:business@malvestudios.com">business@malvestudios.com</a>
                     </div>
