@@ -31,16 +31,17 @@ export default function Services() {
             <div className="top-section">
                 <h2>Services</h2>
             </div>
-            <div className="section">
-            Malve Studios has a crew of top-tier Game Masters ready to run the tabletop RPG of your choice. No matter the system or playstyle, 
-            we know a guy who will keep your adventures smooth and the dice rolling steady.
+            <div className={`section ${styles.services}`}>
+                Malve Studios has a crew of top-tier Game Masters ready to run the tabletop RPG of your choice. No matter the system or playstyle,
+                we know a guy who will keep your adventures smooth and the dice rolling steady.
                 <div className={styles.services_list}>
                     {services.map((service: Service, index: number) => {
                         return (<ServicePanel key={index} index={index} service={service} />)
                     })}
                 </div>
             </div>
-            <div className="section"> <h3 className={styles.h3}>Here&apos;s what we offer:</h3>
+            <div className={`section ${styles.services}`}> 
+                <h3 className={styles.h3}>Here&apos;s what we offer:</h3>
                 <ul>
                     <li>Dungeons and Dragons 5th Edition (2014 and 2024 rules)</li>
                     <li>Pathfinder 1e and 2e</li>
@@ -58,8 +59,8 @@ export default function Services() {
                 </ul>
             </div>
             <div className="section">
-            <h3 className={styles.h3}>Need something more specific?</h3>
-            <Link href="/contact-us#business"><div className="cta_button">Contact Us</div></Link>
+                <h3 className={styles.h3}>Need something more specific?</h3> <br/>
+                <Link href="/contact-us#business"><div className="cta_button">Contact Us</div></Link>
             </div>
         </>
     )
