@@ -28,18 +28,17 @@ export default function Home() {
       </div>
       <div className="section">
         <h2>Skilled Game Masters bring your campaign to life</h2>
-        <p>Whether your game of choice is Dungeons & Dragons, Pathfinder, or Call of Cthulhu, <b className="tan">Malve Studios</b> has <b className="tan">hand-picked</b> a selection of expert
-          Dungeon Masters to conduct your story-driven games.</p>
+        <p>Whether you are rolling for initiative in Dungeons & Dragons, fighting villains in Masks,
+          or facing horrors in Call of Cthulhu, Malve Studios connects you to handpicked masters who make your story unforgettable.</p>
         <br />
        
        {/* <div className="cta_button">View Our Masters</div> */}
       </div>
       <div className="section dice">
         <div className={`section ${styles.nested_section}`}>
-          <h2>Play Anywhere. Full Stop.</h2>
-          <p>Experience <b className="blue">tailor-made</b>, remote delves with your adventuring party from the comfort of home.</p>
-          <p>Our include <b className="blue">Virutal Table Top (VTT)</b> service ensures seamless global connectivity
-            and multitudes of game-enhancing tools.</p>
+          <h2>Play Anywhere. No Limits.</h2>
+          <p>Delve into <b className="blue">epic adventures</b> from the comfort of home.</p>
+          <p>Our <b className="blue">remote sessions</b> are fully customizable, ensuring your party gets the tailor-made experience it deserves.</p>
           <br />
           <div className={styles.bottom_cta_container}>
           <Link href="/services"><div className="cta_button">Learn More</div></Link>
@@ -48,7 +47,7 @@ export default function Home() {
       </div>
       <div className="section petal">
         <h2>Master Your Games</h2>
-        <p><b className="tan">Malve Studios</b> has the <b className="tan">perfect DM</b> to evolve your next night.</p>
+        <p><b className="tan">Malve Studios</b> has the <b className="tan">perfect DM</b> to take your gaming to the next level.</p>
         <p>Still unconvinced? <b className="tan">Reach out to use directly.</b></p>
         <br />
         <Link href="/contact-us"><div className="cta_button">Contact Us</div></Link>

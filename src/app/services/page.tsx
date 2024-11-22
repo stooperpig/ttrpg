@@ -32,7 +32,8 @@ export default function Services() {
                 <h2>Services</h2>
             </div>
             <div className="section">
-                Malve Studios GMs offer a variety of TTRPGs for you to explore. No matter the system of playstyle, we know a guy that can keep your adventures running smoothly.
+            Malve Studios has a crew of top-tier Game Masters ready to run the tabletop RPG of your choice. No matter the system or playstyle, 
+            we know a guy who will keep your adventures smooth and the dice rolling steady.
                 <div className={styles.services_list}>
                     {services.map((service: Service, index: number) => {
                         return (<ServicePanel key={index} index={index} service={service} />)
