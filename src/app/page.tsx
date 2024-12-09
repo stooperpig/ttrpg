@@ -30,6 +30,7 @@ export default function Home() {
         <h2>Skilled Game Masters bring your campaign to life</h2>
         <p>Whether you are rolling for initiative in Dungeons & Dragons, fighting villains in Masks,
           or facing horrors in Call of Cthulhu, Malve Studios connects you to handpicked masters who make your story unforgettable.</p>
+        <p>We take the effort of vetting every GM on ourselves. All you have to do is tell us your playstyle and wants.</p>  
         <br />
        
        {/* <div className="cta_button">View Our Masters</div> */}
@@ -47,8 +48,8 @@ export default function Home() {
       </div>
       <div className="section petal">
         <h2>Master Your Games</h2>
-        <p><b className="tan">Malve Studios</b> has the <b className="tan">perfect DM</b> to take your gaming to the next level.</p>
-        <p>Still unconvinced? <b className="tan">Reach out to use directly.</b></p>
+        <p><b className="tan">Malve Studios</b> matches you with the <b className="tan">perfect DM</b> to take your gaming to the next level.</p>
+        <p>Still unconvinced? <b className="tan">Reach out to us directly.</b></p>
         <br />
         <Link href="/contact-us"><div className="cta_button">Contact Us</div></Link>
       </div>
