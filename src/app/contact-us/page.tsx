@@ -9,7 +9,7 @@ export default function ContactUs() {
             </div>
             <div className={`section ${styles.contact_us}`}>
                 <div id="book" className={styles.book}>
-                    You got questions about our services? Need help finding that perfect man for the head of your table? Shoot us a message.<br />
+                    You got questions about our services? Need help finding that perfect person for the head of your table? Shoot us a message.<br />
                     <div className={styles.email}>
                         Email: <a href="mailto:malve.questions@malvestudios.com">malve.questions@malvestudios.com</a>
                     </div>
