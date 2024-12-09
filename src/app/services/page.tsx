@@ -33,7 +33,8 @@ export default function Services() {
             </div>
             <div className={`section ${styles.services}`}>
                 Malve Studios has a crew of top-tier Game Masters ready to run the tabletop RPG of your choice. No matter the system or playstyle,
-                we know a guy who will keep your adventures smooth and the dice rolling steady.
+                we know a guy who will keep your adventures smooth and the dice rolling steady. Every vetted GM has remote virtual tabletop accessibility for you 
+                and your party to roll from wherever you may be located.
                 <div className={styles.services_list}>
                     {services.map((service: Service, index: number) => {
                         return (<ServicePanel key={index} index={index} service={service} />)
