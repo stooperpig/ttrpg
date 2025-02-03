@@ -22,6 +22,7 @@ export default function RootLayout({
         <Script src="https://www.googletagmanager.com/gtag/js?id=G-6D0539ZP2P" strategy="beforeInteractive" />
         <Script src="gtag.js" strategy="beforeInteractive"/>
         <link rel="stylesheet" href="https://use.typekit.net/cix6ttg.css" />
+        <Script src="pro_dm_fb_tag.js" strategy="beforeInteractive" />
       </head>
       <body>
         <Header />

@@ -18,11 +18,11 @@ export default function Home() {
     <div>
       <div className={`${styles.masthead} ${styles.video_background}`}>
         <video ref={videoRef} className={styles.background_video} muted loop playsInline id="background_video">
-          <source src="/MS_Masthead_Video_Loop.webm" type="video/webm" />
+          <source src="/pro_dm_MS_Masthead_Video_Loop.webm" type="video/webm" />
           Your browser does not support the video tag.
         </video>
         <div className={styles.video_text}>
-          <h1 className={styles.masthead_text}>Curated Masters for your Games</h1>
+          <h1 className={styles.masthead_text}>Vetted Professional Masters for your Games</h1>
           <Link href="/contact-us"><div className="cta_button">Reserve your GM</div></Link>
         </div>
       </div>
