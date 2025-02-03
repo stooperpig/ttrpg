@@ -8,7 +8,7 @@ import Script from "next/script";
 export const metadata: Metadata = {
   title: "Malve Studios",
   description: "",
-  keywords: ["pro dm", "pro gm", "Professional Dungeon Master"]
+  keywords: ["pro dm", "pro gm", "Professional Dungeon Master", "dungeon master", "dm", "game master"]
 };
 
 export default function RootLayout({
@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <Script src="https://www.googletagmanager.com/gtag/js?id=AW-11546391891" strategy="beforeInteractive" />
+        <Script src="https://www.googletagmanager.com/gtag/js?id=G-6D0539ZP2P" strategy="beforeInteractive" />
         <Script src="gtag.js" strategy="beforeInteractive"/>
         <link rel="stylesheet" href="https://use.typekit.net/cix6ttg.css" />
       </head>
