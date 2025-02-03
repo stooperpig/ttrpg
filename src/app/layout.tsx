@@ -7,6 +7,7 @@ import Footer from "./_components/footer";
 export const metadata: Metadata = {
   title: "Malve Studios",
   description: "",
+  keywords: ["pro dm", "pro gm", "Professional Dungeon Master"]
 };
 
 export default function RootLayout({
