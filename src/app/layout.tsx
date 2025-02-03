@@ -18,6 +18,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11546391891"></script>
+        <script>
+          window.dataLayer: Record[] = window.dataLayer || [];
+          function gtag(){window.dataLayer.push(arguments)}
+          gtag('js', new Date());
+
+          gtag('config', 'AW-11546391891');
+        </script>
         <link rel="stylesheet" href="https://use.typekit.net/cix6ttg.css" />
       </head>
       <body>
