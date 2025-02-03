@@ -19,8 +19,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <Script src="https://www.googletagmanager.com/gtag/js?id=AW-11546391891" />
-        <Script src="gtag.js" />
+        <Script src="https://www.googletagmanager.com/gtag/js?id=AW-11546391891" strategy="beforeInteractive" />
+        <Script src="gtag.js" strategy="beforeInteractive"/>
         <link rel="stylesheet" href="https://use.typekit.net/cix6ttg.css" />
       </head>
       <body>
