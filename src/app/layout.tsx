@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Header from "./_components/header";
 import Footer from "./_components/footer";
+import Script from "next/script";
 
 
 export const metadata: Metadata = {
@@ -18,14 +19,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11546391891"></script>
-        <script>
-          window.dataLayer: Record[] = window.dataLayer || [];
-          function gtag(){window.dataLayer.push(arguments)}
-          gtag('js', new Date());
-
-          gtag('config', 'AW-11546391891');
-        </script>
+        <Script src="https://www.googletagmanager.com/gtag/js?id=AW-11546391891" />
+        <Script src="gtag.js" />
         <link rel="stylesheet" href="https://use.typekit.net/cix6ttg.css" />
       </head>
       <body>
