@@ -22,7 +22,7 @@ export default function ServicePanel(props: PropTypes) {
             })}
             </div>
             <br/>
-            <Link href="/contact-us#book"><div className="cta_button">{props.service.cta}</div></Link>
+            <Link href={props.service.href}><div className="cta_button">{props.service.cta}</div></Link>
         </div>
     )
 }
