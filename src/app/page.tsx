@@ -23,7 +23,7 @@ export default function Home() {
         </video>
         <div className={styles.video_text}>
           <h1 className={styles.masthead_text}>Vetted Professional Masters for your Games</h1>
-          <Link href="/contact-us"><div className="cta_button">Reserve your GM</div></Link>
+          <Link href="/services"><div className="cta_button">Reserve your GM</div></Link>
         </div>
       </div>
       <div className="section">
