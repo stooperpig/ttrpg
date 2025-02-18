@@ -30,9 +30,14 @@
     font-style: normal;
 }
 
+.calendar {
+    margin-top: 20px;
+    display: block;
+}
+
 .iframe {
     margin: auto;
-    display:none;
+    display: none;
 }
 
 @media(min-width: 600px) {
@@ -50,8 +55,12 @@
 
 @media(min-width: 1000px) {
     .iframe {
-        display:block;
-        margin:auto;
+        display: block;
+        margin: auto;
+    }
+
+    .calendar {
+        display: none;
     }
 
 }

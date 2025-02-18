@@ -12,6 +12,7 @@ export default function Footer() {
                 <Image src="/pro_dm_MS_Logo_White.svg" alt="My SVG" width={44} height={44} />
                 </Link>
             </div>
+            <div> <Link href="/privacy-policy"> Privacy Policy </Link></div> <br/>
             <div><span className={styles.copyright}>&#169;</span>Malve Studios 2024. All Rights Reserved.</div>
         </div>
     );

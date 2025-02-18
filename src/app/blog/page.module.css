@@ -1,0 +1,65 @@
+.privacy_policy {
+    font-size: 24px;
+    font-family: "meno-banner-condensed", serif;
+    font-weight: 300;
+    font-style: normal;
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start
+}
+
+.header {
+    display: flex;
+    padding: 80px 0px 40px 0px;
+}
+
+.link:visited {
+    color: white;
+}
+
+.link {
+    text-decoration: underline;
+}
+
+.survey {
+    margin-top: 20px;
+
+}
+
+.book {
+    margin-bottom: 40px;
+}
+
+.business {
+    margin-bottom: 40px;
+}
+
+.banner {
+    height: 130px;
+    padding: 80px 0px 0px 60px;
+
+    background-size: 100% auto;
+    /* Keeps the image at its original size */
+    background-position: 0px -525px;
+    /* Aligns the image to the top-left corner */
+    background-repeat: no-repeat;
+    /* Ensures the image doesn't repeat */
+}
+
+.email {
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+@media(min-width: 600px) {
+    .banner {
+        height: 150px;
+        padding: 60px 0px 0px 60px;
+    }
+
+    .contact_us {
+        font-size: 28px;
+    }
+}

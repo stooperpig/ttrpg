@@ -7,7 +7,7 @@ export interface Service {
     cta: string
     description: string[]
     href: string
-    price: number
+    price: number | string
     priceText: string
     title: string
 }
