@@ -3,8 +3,10 @@ import path from "path";
 import matter from "gray-matter";
 
 export type ServerPost = {
+  image: string;
   title: string;
   date: string;
+  author: string;
   tags?: string[];
   content: string;
 };
@@ -21,8 +23,10 @@ export function getPosts(): ServerPost[] {
       const { data, content } = matter(fileContents);
 
       return {
+        image: data.image,
         title: data.title,
         date: data.date,
+        author: data.author,
         tags: data.tags || [],
         content,
       };
