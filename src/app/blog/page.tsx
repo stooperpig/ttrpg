@@ -50,7 +50,7 @@ export default function ProDMBlog() {
             <div className="top-section dice_chat">
                 <h2>Blog</h2>
             </div>
-            <div className="section">
+            <div className={styles.blog_section}>
                 {posts.map((post: ClientPost, index: number) => {
                     return (<div key={index}>{renderPost(post)}</div>)
                 })}

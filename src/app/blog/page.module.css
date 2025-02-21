@@ -1,5 +1,5 @@
 .image {
-    height: 100px;
+    height: 125px;
     width: auto; 
 }
 
@@ -18,4 +18,8 @@
     font-size: larger;
     font-weight: bold;
     margin-bottom: 10px;
+}
+
+.blog_section {
+    padding: 20px 60px 40px 60px;
 }
