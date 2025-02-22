@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from "./_components/header";
 import Footer from "./_components/footer";
 import Script from "next/script";
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 
 export const metadata: Metadata = {
@@ -31,6 +32,7 @@ export default function RootLayout({
         <div className="main">
           {children}
           <Footer />
+          <SpeedInsights />
         </div>
       </body>
     </html>
