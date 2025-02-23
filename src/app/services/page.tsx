@@ -62,7 +62,7 @@ export default function Services() {
                 <ul>
                     <li>Austin, Texas</li>
                     <li>Los Angeles, California</li>
-                    <li>Twin Cities, Minnisota</li>
+                    <li>Twin Cities, Minnesota</li>
                     <li>Columbus, Ohio</li>
                 </ul>
             </div>
