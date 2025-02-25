@@ -29,7 +29,7 @@ export default function ProDMBlog() {
     if (posts.length === 0) return <p>No blog posts found.</p>;
 
     const handlePostClick = (slug: string) => {
-        router.push(`/blog/${slug}`);   
+        router.push(`/minutae/${slug}`);   
     }
 
     const renderPost = (post: ClientPost) => {
@@ -47,8 +47,8 @@ export default function ProDMBlog() {
 
     return (
         <div>
-            <div className="top-section dice_chat">
-                <h2>Blog</h2>
+            <div className="top-section dice_study">
+                <h2>Minutae</h2>
             </div>
             <div className={styles.blog_section}>
                 {posts.map((post: ClientPost, index: number) => {

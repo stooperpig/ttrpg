@@ -48,6 +48,13 @@ a {
   background-repeat: no-repeat;
 }
 
+.dice_study {
+  background-image: url('/Study_Dice.jpg');
+  background-size: auto;
+  background-position: left 24% bottom 71%;
+  background-repeat: no-repeat;
+}
+
 .petal {
   background-image: url('/MS_MalvePedal_BG.webp');
   background-size: cover;
