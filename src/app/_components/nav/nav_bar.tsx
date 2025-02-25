@@ -16,8 +16,12 @@ export default function NavBar(props: PropTypes) {
             <ul className={styles.navList}>
                 {props.links.map((link, index) => {
                     const pagePath = link.url;
-                    const isActive = pathname === pagePath;
-                    console.log(`pathname: ${pathname} pagePath: ${pagePath}`);
+                    let isActive = false;
+                    if (pagePath.length > 1) {
+                        isActive = pathname.startsWith(pagePath);
+                    } else {
+                        isActive = pathname === pagePath;
+                    }
 
                     return (
                         <li key={index} className={styles.navItem}>
