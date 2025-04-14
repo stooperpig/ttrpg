@@ -56,8 +56,8 @@ export default function BlogPost() {
                     <div className={styles.content} dangerouslySetInnerHTML={{ __html: marked(post.content) }} />
 
                     <div style={{ marginTop: "20px", display: "flex", justifyContent: "space-between" }}>
-                        {post.previous !== undefined ? <Link href={`/minutae/${post.previous}`}>← Previous</Link> : <span />}
-                        {post.next !== undefined ? <Link href={`/minutae/${post.next}`}>Next →</Link> : <span />}
+                        {post.previous !== undefined ? <Link href={`/blog/${post.previous}`}>← Previous</Link> : <span />}
+                        {post.next !== undefined ? <Link href={`/blog/${post.next}`}>Next →</Link> : <span />}
                     </div>
             </div>
             </div>

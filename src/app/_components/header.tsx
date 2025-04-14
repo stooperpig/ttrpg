@@ -16,7 +16,7 @@ export default function Header() {
         //{ name: 'Masters', url: '/masters' },
         { name: 'Services', url: '/services' },
         //{ name: 'Reserve a GM', url: '/reserve' },
-        { name: 'Minutae', url: '/minutae' },
+        { name: 'Blog', url: '/blog' },
         { name: 'Contact Us', url: '/contact-us' }
 
     ];
