@@ -22,19 +22,20 @@ export default function Home() {
           Your browser does not support the video tag.
         </video>
         <div className={styles.video_text}>
-          <h1 className={styles.masthead_text}>Vetted Professional Masters for your Games</h1>
+          <h1 className={styles.masthead_text}>Game Masters with Standards</h1>
           <Link href="/services"><div className="cta_button">Reserve your GM</div></Link>
         </div>
       </div>
       <div className="section">
-        <h2>Skilled Game Masters bring your campaign to life</h2>
-        <p>Whether you are rolling for initiative in Dungeons & Dragons, fighting villains in Masks,
-          or facing horrors in Call of Cthulhu, Malve Studios connects you to handpicked professional dungeon masters and game masters who make your story unforgettable.</p>
-        <p>We take the effort of vetting every GM on ourselves. All you have to do is tell us your playstyle and wants.</p>  
+        <h2>TTRPG Masters Who Actually Devliver</h2>
+        <p>Don’t gamble with your time. From Dungeons&Dragons to Humans in Offices, Malve Studios’ Game Masters will not only meet your standards, but also ours. 
+          <br/>We contract quality Game Masters who host games you want with the experiences you deserve. The only time you invest is the time it takes to <br/>
+          <Link href="https://malvestudios.notion.site/12d1b67a744e8028ab50fd2725091aff?pvs=105">tell us about yourself.</Link></p>
         <br />
+       </div>
        
        {/* <div className="cta_button">View Our Masters</div> */}
-      </div>
+      
       <div className="section dice">
         <div className={`section ${styles.nested_section}`}>
           <h2>Play Anywhere. No Limits.</h2>
@@ -56,3 +57,4 @@ export default function Home() {
     </div>
   );
 }
+
