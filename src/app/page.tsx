@@ -27,7 +27,7 @@ export default function Home() {
         </div>
       </div>
       <div className="section">
-        <h2>TTRPG Masters Who Actually Devliver</h2>
+        <h2>TTRPG Masters Who Actually Deliver</h2>
         <p>Don’t gamble with your time. From Dungeons&Dragons to Humans in Offices, Malve Studios’ Game Masters will not only meet your standards, but also ours. 
           <br/>We contract quality Game Masters who host games you want with the experiences you deserve. The only time you invest is the time it takes to <br/>
           <Link href="https://malvestudios.notion.site/12d1b67a744e8028ab50fd2725091aff?pvs=105">tell us about yourself.</Link></p>
