@@ -49,7 +49,7 @@ export default function Services() {
             <div className={`section ${styles.services}`}>
                 Malve Studios has a crew of top-tier Game Masters ready to run the tabletop RPG of your choice. No matter the system or playstyle,
                 we have a Pro DM who will keep your adventures smooth and the dice rolling steady. Every vetted GM has remote virtual tabletop accessibility for you
-                and your party to roll from wherever you may be located. Check the calendar below to find a game!
+                and your party to roll from wherever you may be located.
                 <div className={styles.services_list}>
                     {services.map((service: Service, index: number) => {
                         return (<ServicePanel key={index} index={index} service={service} />)
@@ -57,7 +57,7 @@ export default function Services() {
                 </div>
             </div>
 
-            <div className={`section ${styles.services}`}>
+            {/* <div className={`section ${styles.services}`}>
                 <h3 className={styles.h3}>Now Serving the following locations for In-Person Sessions:</h3>
                 <ul>
                     <li>Austin, Texas</li>
@@ -65,13 +65,13 @@ export default function Services() {
                     <li>Twin Cities, Minnesota</li>
                     <li>Columbus, Ohio</li>
                 </ul>
-            </div>
+            </div> */}
 
-            <iframe className={styles.iframe} src="https://malvestudios.notion.site/ebd/b07ae1ffaa63402281be87d5e94b916d?v=283e3e39b102422983772b22326d5312" width="85%" height="900" frameBorder="0" allowFullScreen />
+            {/* <iframe className={styles.iframe} src="https://malvestudios.notion.site/ebd/b07ae1ffaa63402281be87d5e94b916d?v=283e3e39b102422983772b22326d5312" width="85%" height="900" frameBorder="0" allowFullScreen /> */}
 
-            <div className={styles.calendar}>
+            {/* <div className={styles.calendar}>
                 <p><Link className={styles.link} href="https://malvestudios.notion.site/b07ae1ffaa63402281be87d5e94b916d?v=283e3e39b102422983772b22326d5312">Mobile Friendly Calendar</Link></p>
-            </div>
+            </div> */}
 
 
             <div className="section">
