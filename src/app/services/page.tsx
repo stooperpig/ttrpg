@@ -29,7 +29,7 @@ export default function Services() {
     },
     {
         title: 'In-Person Games',
-        price: '300-400',
+        price: '400',
         priceText: 'FOR UP TO 8 PLAYERS',
         description: [
             '4-6 Hour Adventure',
