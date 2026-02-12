@@ -18,7 +18,7 @@ export default function Referraltag() {
                     <h2>Referred by Emerald Tavern</h2>
                     We provide vetted, Professional Dungeon Masters for private D&D experiences across Austin.<br />
                     Whether it&apos;s a birthday, a friend gathering, or a serious campaign launch - we handle everything. <br />
-                    <br/>
+                    <br />
                     What You Get: <ul>
                         <li>3-5 hour professionally run session</li>
                         <li>Custom adventure tailored to your group</li>
@@ -35,9 +35,7 @@ export default function Referraltag() {
                         <li>We schedule your private session</li>
                         <li>After booking, we&apos;ll coordinate with your full group to prepare</li>
                     </ol>
-                    <div className={styles.email}>
-                        <ReferralPanel key={0} index={0} service={service} />
-                    </div>
+                    <ReferralPanel key={0} index={0} service={service} />
                 </div>
             </div>
         </>
