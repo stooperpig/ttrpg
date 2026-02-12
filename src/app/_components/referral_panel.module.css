@@ -1,0 +1,9 @@
+.referral_panel {
+    display: flex;
+    flex-direction: column;
+    width: 305px; 
+    text-align: left;
+    align-items: left;
+    padding-bottom: 40px;
+}
+

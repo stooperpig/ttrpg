@@ -11,3 +11,8 @@ export interface Service {
     priceText: string
     title: string
 }
+
+export interface Referral {
+    cta: string
+    href: string
+}
