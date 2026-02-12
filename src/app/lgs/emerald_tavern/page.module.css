@@ -10,7 +10,8 @@
     justify-content: flex-start
 }
 
-.referral ul, .referral ol {
+.referral ul,
+.referral ol {
     margin-top: 0;
 }
 
@@ -41,20 +42,13 @@
 }
 
 .banner {
-    height: 130px;
-    padding: 80px 0px 0px 60px;
-
-    background-size: 100% auto;
-    /* Keeps the image at its original size */
-    background-position: 0px -525px;
-    /* Aligns the image to the top-left corner */
+    background-size: cover;
+    /* Ensure the image covers the div area */
+    background-position: center top;
+    /* Keeps the image centered horizontally and aligned with the top */
     background-repeat: no-repeat;
-    /* Ensures the image doesn't repeat */
-}
-
-.email {
-    font-size: 24px;
-    margin-top: 10px;
+    height: 150px;
+    padding: 60px 0 0 60px;
 }
 
 @media(min-width: 600px) {
