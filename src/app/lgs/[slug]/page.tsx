@@ -1,10 +1,21 @@
+"use client";
+
 import styles from './page.module.css';
 import { Referral } from "@/app/_types/types";
 import ReferralPanel from "@/app/_components/referral_panel";
+import { useParams } from "next/navigation";
 
-export default function Referraltag() {
+export default function ReferralSlug() {
+    const params = useParams<{ slug?: string }>();
+
+    const referrerMap: {[key:string] : string} = {
+        'emerald-tavern' : 'Emerald Tavern',
+        'vigilante' : 'Vigilante'
+    }
+
+    const slug = params?.slug || "";
+    const referrer = referrerMap[slug] || slug;
     const service: Referral = {
-
         cta: 'Book Your Planning Call',
         href: "https://calendly.com/malvestudios/one-shot-conversation"
     };
@@ -15,7 +26,7 @@ export default function Referraltag() {
             </div>
             <div className={`section ${styles.referral}`}>
                 <div id="book" className={styles.book}>
-                    <h2>Referred by Emerald Tavern</h2>
+                    <h2>Referred by {referrer}</h2>
                     We provide vetted, Professional Dungeon Masters for private D&D experiences across Austin.<br />
                     Whether it&apos;s a birthday, a friend gathering, or a serious campaign launch - we handle everything. <br />
                     <br/>
