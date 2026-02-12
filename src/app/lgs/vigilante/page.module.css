@@ -1,43 +1,54 @@
-.services_list {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 40px;
-    margin-top: 30px;
-}
-
-.h3 {
-    margin-bottom: 0px;
-}
-
-.banner {
-    height: 130px;
-    padding: 80px 0px 0px 60px;
-
-    background-size: 100% auto;
-    /* Keeps the image at its original size */
-    background-position: 0px -525px;
-    /* Aligns the image to the top-left corner */
-    background-repeat: no-repeat;
-    /* Ensures the image doesn't repeat */
-}
-
-.services {
+.referral {
     font-size: 24px;
     font-family: "meno-banner-condensed", serif;
     font-weight: 300;
     font-style: normal;
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start
 }
 
-.calendar {
+.referral ul,
+.referral ol {
+    margin-top: 0;
+}
+
+.header {
+    display: flex;
+    padding: 80px 0px 40px 0px;
+}
+
+.link:visited {
+    color: white;
+}
+
+.link {
+    text-decoration: underline;
+}
+
+.survey {
     margin-top: 20px;
-    display: block;
+
 }
 
-.iframe {
-    margin: auto;
-    display: none;
+.book {
+    margin-bottom: 40px;
+}
+
+.business {
+    margin-bottom: 40px;
+}
+
+.banner {
+    background-size: cover;
+    /* Ensure the image covers the div area */
+    background-position: center top;
+    /* Keeps the image centered horizontally and aligned with the top */
+    background-repeat: no-repeat;
+    height: 130px;
+    padding: 80px 0px 0px 35px;
 }
 
 @media(min-width: 600px) {
@@ -46,21 +57,7 @@
         padding: 60px 0px 0px 60px;
     }
 
-    .services {
+    .contact_us {
         font-size: 28px;
     }
-
-
-}
-
-@media(min-width: 1000px) {
-    .iframe {
-        display: block;
-        margin: auto;
-    }
-
-    .calendar {
-        display: none;
-    }
-
 }
