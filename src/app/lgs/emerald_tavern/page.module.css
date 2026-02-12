@@ -47,8 +47,8 @@
     background-position: center top;
     /* Keeps the image centered horizontally and aligned with the top */
     background-repeat: no-repeat;
-    height: 150px;
-    padding: 60px 0 0 60px;
+    height: 130px;
+    padding: 80px 0px 0px 60px;
 }
 
 @media(min-width: 600px) {
