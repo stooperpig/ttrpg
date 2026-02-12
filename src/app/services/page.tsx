@@ -29,7 +29,7 @@ export default function Services() {
     },
     {
         title: 'In-Person Games',
-        price: '300-400',
+        price: '400',
         priceText: 'FOR UP TO 8 PLAYERS',
         description: [
             '4-6 Hour Adventure',
@@ -48,7 +48,11 @@ export default function Services() {
             </div>
             <div className={`section ${styles.services}`}>
                 Malve Studios has a crew of top-tier Game Masters ready to run the tabletop RPG of your choice. No matter the system or playstyle,
+<<<<<<< HEAD
                 we have a Pro DM who will keep your adventures smooth and the dice rolling steady. Every vetted GM has remote virtual tabletop accessibility for you
+=======
+                we have a Pro GM who will keep your adventures smooth and the dice rolling steady. Every vetted GM has remote virtual tabletop accessibility for you
+>>>>>>> 5af8e873ceadb794184c604be782df61110b8f94
                 and your party to roll from wherever you may be located.
                 <div className={styles.services_list}>
                     {services.map((service: Service, index: number) => {
@@ -66,10 +70,15 @@ export default function Services() {
                     <li>Columbus, Ohio</li>
                 </ul>
             </div> */}
+<<<<<<< HEAD
 {/* 
             <iframe className={styles.iframe} src="https://malvestudios.notion.site/ebd/b07ae1ffaa63402281be87d5e94b916d?v=283e3e39b102422983772b22326d5312" width="85%" height="900" frameBorder="0" allowFullScreen />
+=======
 
-            <div className={styles.calendar}>
+            {/* <iframe className={styles.iframe} src="https://malvestudios.notion.site/ebd/b07ae1ffaa63402281be87d5e94b916d?v=283e3e39b102422983772b22326d5312" width="85%" height="900" frameBorder="0" allowFullScreen /> */}
+>>>>>>> 5af8e873ceadb794184c604be782df61110b8f94
+
+            {/* <div className={styles.calendar}>
                 <p><Link className={styles.link} href="https://malvestudios.notion.site/b07ae1ffaa63402281be87d5e94b916d?v=283e3e39b102422983772b22326d5312">Mobile Friendly Calendar</Link></p>
             </div> */}
 
