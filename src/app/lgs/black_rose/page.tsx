@@ -16,7 +16,7 @@ export default function Referraltag() {
             <div className={`section ${styles.referral}`}>
                 <div id="book" className={styles.book}>
                     <h2>Referred by Black Rose Gaming</h2>
-                    We provide vetted, Professional Dungeon Masters for private D&D experiences across Central Texas.<br />
+                    We provide vetted, Professional Game Masters for private TTRPG experiences across Central Texas.<br />
                     Whether it&apos;s a birthday, a friend gathering, or a serious campaign launch - we handle everything. <br />
                     <br />
                     What You Get: <ul>
