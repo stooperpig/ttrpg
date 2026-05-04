@@ -11,12 +11,12 @@ export default function Referraltag() {
     return (
         <>
             <div className={`dice_chat ${styles.banner}`}>
-                <h2>Private Dungeons & Dragons</h2>
+                <h2>Private TTRPG Sessions</h2>
             </div>
             <div className={`section ${styles.referral}`}>
                 <div id="book" className={styles.book}>
-                    <h2>Referred by Emerald Tavern</h2>
-                    We provide vetted, Professional Dungeon Masters for private D&D experiences across Austin.<br />
+                    <h2>Referred by Black Rose Gaming</h2>
+                    We provide vetted, Professional Dungeon Masters for private D&D experiences across Central Texas.<br />
                     Whether it&apos;s a birthday, a friend gathering, or a serious campaign launch - we handle everything. <br />
                     <br />
                     What You Get: <ul>
