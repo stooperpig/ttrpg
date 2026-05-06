@@ -29,16 +29,16 @@ export default function Home() {
       <div className="section">
         <h2>A Table That Actually Fits</h2>
         <p>Malve matches the table to you based on your schedule, style, table chemistry, and experience level.
-          <br/>
+          <br />
 
           <p> Our Game Masters are vetted to prioritize your playing experience online and in person.</p>
           Your time is valuable. Spend it playing, not searching.<p>
-           Send us an <Link href="mailto:business@malvestudios.com"> email </Link> or set up a<Link href="https://calendly.com/malvestudios/one-shot-conversation?month=2026-05">  call </Link>with our Coordinator.</p></p><br/>
+            Send us an <Link href="mailto:business@malvestudios.com"> email </Link> or set up a<Link href="https://calendly.com/malvestudios/one-shot-conversation?month=2026-05">  call </Link>with our Coordinator.</p></p><br />
         <br />
-       </div>
-       
-       {/* <div className="cta_button">View Our Masters</div> */}
-      
+      </div>
+
+      {/* <div className="cta_button">View Our Masters</div> */}
+
       <div className="section dice">
         <div className={`section ${styles.nested_section}`}>
           <h2>Play Anywhere. Find Your Table.</h2>
@@ -46,7 +46,7 @@ export default function Home() {
           <p>We help <b className="blue">match you</b> to a remote table that actually fits.</p>
           <br />
           <div className={styles.bottom_cta_container}>
-          <Link href="/services"><div className="cta_button">Find My Table</div></Link>
+            <Link href="/services"><div className="cta_button">Find My Table</div></Link>
           </div>
         </div>
       </div>
