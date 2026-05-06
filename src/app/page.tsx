@@ -22,15 +22,18 @@ export default function Home() {
           Your browser does not support the video tag.
         </video>
         <div className={styles.video_text}>
-          <h1 className={styles.masthead_text}>Game Masters with Standards</h1>
-          <Link href="/services"><div className="cta_button">Reserve your GM</div></Link>
+          <h1 className={styles.masthead_text}>Stop Rolling Dice To Find Your Next Campaign</h1>
+          <Link href="/services"><div className="cta_button">Find My Table</div></Link>
         </div>
       </div>
       <div className="section">
-        <h2>TTRPG Masters Who Actually Deliver</h2>
-        <p>Don’t gamble with your time. From Dungeons&Dragons to Humans in Offices, Malve Studios’ Game Masters will not only meet your standards, but also ours. 
-          <br/>We contract quality Game Masters who host games you want with the experiences you deserve. The only time you invest is the time it takes to <br/>
-          <Link href="https://malvestudios.notion.site/12d1b67a744e8028ab50fd2725091aff?pvs=105">tell us about yourself.</Link></p>
+        <h2>A Table That Actually Fits</h2>
+        <p>Malve matches the table to you based on your schedule, style, table chemistry, and experience level.
+          <br/>
+
+          <p> Our Game Masters are vetted to prioritize your playing experience online and in person.</p>
+          Your time is valuable. Spend it playing, not searching.<p>
+           Send us an <Link href="mailto:business@malvestudios.com"> email </Link> or set up a<Link href="https://calendly.com/malvestudios/one-shot-conversation?month=2026-05">  call </Link>with our Coordinator.</p></p><br/>
         <br />
        </div>
        
@@ -38,19 +41,19 @@ export default function Home() {
       
       <div className="section dice">
         <div className={`section ${styles.nested_section}`}>
-          <h2>Play Anywhere. No Limits.</h2>
-          <p>Delve into <b className="blue">epic adventures</b> from the comfort of home.</p>
-          <p>Our <b className="blue">remote sessions</b> are fully customizable, ensuring your party gets the tailor-made experience it deserves.</p>
+          <h2>Play Anywhere. Find Your Table.</h2>
+          <p>Online games shouldn't feel <b className="blue">random</b>.</p>
+          <p>We help <b className="blue">match you</b> to a remote table that actually fits.</p>
           <br />
           <div className={styles.bottom_cta_container}>
-          <Link href="/services"><div className="cta_button">Learn More</div></Link>
+          <Link href="/services"><div className="cta_button">Find My Table</div></Link>
           </div>
         </div>
       </div>
       <div className="section petal">
         <h2>Master Your Games</h2>
-        <p><b className="tan">Malve Studios</b> matches you with the <b className="tan">perfect professional DM</b> to take your gaming to the next level.</p>
-        <p>Still unconvinced? <b className="tan">Reach out to us directly.</b></p>
+        <p><b className="tan">Not every GM is the right GM for </b> your perfect table.</p>
+        <p>Malve helps match you with a GM who fits  <b className="tan">the game you actually want to play.</b></p>
         <br />
         <Link href="/contact-us"><div className="cta_button">Contact Us</div></Link>
       </div>
