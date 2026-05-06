@@ -42,7 +42,7 @@ export default function Home() {
       <div className="section dice">
         <div className={`section ${styles.nested_section}`}>
           <h2>Play Anywhere. Find Your Table.</h2>
-          <p>Online games shouldn't feel <b className="blue">random</b>.</p>
+          <p>Online games shouldn&apos;t feel <b className="blue">random</b>.</p>
           <p>We help <b className="blue">match you</b> to a remote table that actually fits.</p>
           <br />
           <div className={styles.bottom_cta_container}>
