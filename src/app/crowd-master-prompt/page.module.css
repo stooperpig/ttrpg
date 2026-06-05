@@ -1,0 +1,137 @@
+.controlPage {
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 100px 28px 42px;
+}
+
+.panel {
+  max-width: 760px;
+  width: 100%;
+}
+
+.eyebrow {
+  color: #02b8e6;
+  font-family: "garamond-premier-pro-display", serif;
+  font-size: 14px;
+  letter-spacing: 0;
+  margin: 0 0 8px;
+  text-transform: uppercase;
+}
+
+.panel h1 {
+  font-size: 52px;
+  line-height: 0.96;
+  margin: 0 0 14px;
+}
+
+.status {
+  margin: 0 0 24px;
+}
+
+.linkGrid {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-bottom: 28px;
+}
+
+.promptForm {
+  border: 1px solid rgba(112, 91, 57, 1);
+  border-radius: 8px;
+  display: grid;
+  gap: 14px;
+  margin-bottom: 20px;
+  padding: 18px;
+}
+
+.promptForm label {
+  display: grid;
+  gap: 8px;
+}
+
+.promptForm span {
+  color: #02b8e6;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.promptForm input {
+  background: rgba(22, 19, 20, 0.92);
+  border: 1px solid rgba(112, 91, 57, 1);
+  border-radius: 6px;
+  color: #fff0de;
+  font: 20px "garamond-premier-pro", serif;
+  min-height: 46px;
+  padding: 8px 12px;
+}
+
+.diceGrid {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.linkGrid a,
+.actions button,
+.promptForm button {
+  align-items: center;
+  background: #02b8e6;
+  border: 0;
+  border-radius: 6px;
+  color: #161314;
+  display: flex;
+  font: 700 18px "garamond-premier-pro", serif;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0 16px;
+}
+
+.currentResult {
+  border-bottom: 1px solid rgba(112, 91, 57, 1);
+  border-top: 1px solid rgba(112, 91, 57, 1);
+  margin: 12px 0 24px;
+  padding: 22px 0;
+}
+
+.currentResult h2 {
+  font-size: 38px;
+  line-height: 1;
+  margin: 0 0 10px;
+}
+
+.currentResult p {
+  line-height: 1.35;
+  margin: 0 0 12px;
+}
+
+.currentResult small,
+.emptyNote {
+  color: rgba(255, 240, 222, 0.72);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.actions .secondaryButton {
+  background: transparent;
+  border: 1px solid rgba(112, 91, 57, 1);
+  color: #fff0de;
+}
+
+@media (max-width: 599px) {
+  .linkGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .diceGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .panel h1 {
+    font-size: 44px;
+  }
+}

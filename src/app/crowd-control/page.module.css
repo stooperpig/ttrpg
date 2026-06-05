@@ -1,0 +1,124 @@
+.mobilePage {
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 86px 18px 32px;
+  background:
+    linear-gradient(rgba(22, 19, 20, 0.78), rgba(22, 19, 20, 0.96)),
+    url("/MS_DiceBG.webp") center / cover;
+}
+
+.form {
+  width: min(100%, 520px);
+}
+
+.intro {
+  margin-bottom: 28px;
+}
+
+.eyebrow,
+.field span,
+.segmentGroup legend {
+  color: #02b8e6;
+  font-family: "garamond-premier-pro-display", serif;
+  font-size: 14px;
+  letter-spacing: 0;
+  margin: 0 0 8px;
+  text-transform: uppercase;
+}
+
+.intro h1 {
+  font-size: 48px;
+  line-height: 0.96;
+  margin: 0 0 12px;
+}
+
+.intro p {
+  line-height: 1.35;
+  margin: 0;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 18px;
+}
+
+.field input,
+.field textarea {
+  border: 1px solid rgba(112, 91, 57, 1);
+  border-radius: 6px;
+  background: rgba(22, 19, 20, 0.92);
+  color: #fff0de;
+  font: 20px "garamond-premier-pro", serif;
+  min-height: 48px;
+  padding: 12px 14px;
+}
+
+.field input:focus {
+  border-color: #02b8e6;
+  outline: 2px solid rgba(2, 184, 230, 0.24);
+}
+
+.rollPanel,
+.waitingPanel {
+  border: 1px solid rgba(112, 91, 57, 1);
+  border-radius: 8px;
+  padding: 18px;
+}
+
+.timer {
+  color: #02b8e6;
+  font: 700 44px "meno-banner-condensed", serif;
+  line-height: 1;
+  margin-bottom: 14px;
+}
+
+.rollButton {
+  background: #02b8e6;
+  border: 0;
+  border-radius: 6px;
+  color: #161314;
+  font: 700 20px "garamond-premier-pro", serif;
+  min-height: 52px;
+  width: 100%;
+}
+
+.rollButton:disabled {
+  opacity: 0.64;
+}
+
+.localResult {
+  margin-top: 18px;
+}
+
+.localResult span {
+  color: rgba(255, 240, 222, 0.72);
+  display: block;
+  font: 16px "garamond-premier-pro-display", serif;
+  text-transform: uppercase;
+}
+
+.localResult strong {
+  display: block;
+  font: 72px "meno-banner-condensed", serif;
+  line-height: 0.9;
+}
+
+.localResult p,
+.waitingPanel,
+.successMessage {
+  line-height: 1.35;
+  margin: 0;
+}
+
+.successMessage {
+  color: #fff0de;
+  margin-top: 16px;
+}
+
+@media (min-width: 600px) {
+  .mobilePage {
+    padding-top: 104px;
+  }
+}

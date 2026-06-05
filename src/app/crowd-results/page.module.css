@@ -1,0 +1,165 @@
+.resultsPage {
+  align-items: center;
+  background:
+    linear-gradient(90deg, rgba(22, 19, 20, 0.92), rgba(22, 19, 20, 0.58)),
+    url("/MS_Dice_Chat.jpg") center / cover;
+  display: flex;
+  min-height: 100vh;
+  padding: 96px 36px 48px;
+}
+
+.resultShell {
+  max-width: 920px;
+  width: 100%;
+}
+
+.eyebrow,
+.timestamp {
+  color: #02b8e6;
+  font-family: "garamond-premier-pro-display", serif;
+  font-size: 16px;
+  letter-spacing: 0;
+  margin: 0 0 10px;
+  text-transform: uppercase;
+}
+
+.resultShell h1 {
+  font-size: 58px;
+  line-height: 0.94;
+  margin: 0 0 18px;
+  max-width: 820px;
+}
+
+.metaRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 28px;
+}
+
+.metaRow span {
+  border: 1px solid rgba(255, 240, 222, 0.42);
+  border-radius: 999px;
+  color: #fff0de;
+  font: 18px "garamond-premier-pro", serif;
+  padding: 8px 14px;
+}
+
+.resultText {
+  font-size: 30px;
+  line-height: 1.28;
+  margin: 0 0 24px;
+  max-width: 860px;
+}
+
+.finalResult {
+  margin: 12px 0 24px;
+}
+
+.finalResult span {
+  color: rgba(255, 240, 222, 0.72);
+  display: block;
+  font: 18px "garamond-premier-pro-display", serif;
+  text-transform: uppercase;
+}
+
+.finalResult strong {
+  color: #02b8e6;
+  display: block;
+  font: 132px "meno-banner-condensed", serif;
+  line-height: 0.86;
+}
+
+.statsGrid {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  max-width: 760px;
+}
+
+.statsGrid span {
+  border-top: 1px solid rgba(112, 91, 57, 1);
+  color: rgba(255, 240, 222, 0.82);
+  font: 20px "garamond-premier-pro", serif;
+  padding-top: 10px;
+}
+
+.historySection {
+  margin-top: 42px;
+  max-width: 860px;
+}
+
+.historyList {
+  display: grid;
+  gap: 8px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.historyList li {
+  align-items: center;
+  border-top: 1px solid rgba(112, 91, 57, 0.72);
+  display: grid;
+  gap: 8px;
+  grid-template-columns: 72px minmax(130px, 1fr) minmax(220px, 2fr);
+  padding: 10px 0;
+}
+
+.historyList strong {
+  color: #02b8e6;
+  font: 42px "meno-banner-condensed", serif;
+  line-height: 0.9;
+}
+
+.historyList span {
+  color: #fff0de;
+  font: 20px "garamond-premier-pro", serif;
+}
+
+.historyList small {
+  color: rgba(255, 240, 222, 0.72);
+  font: 15px "garamond-premier-pro", serif;
+  line-height: 1.25;
+}
+
+.timestamp {
+  color: rgba(255, 240, 222, 0.72);
+  margin-top: 12px;
+}
+
+.emptyState p {
+  line-height: 1.35;
+  max-width: 520px;
+}
+
+@media (max-width: 599px) {
+  .resultsPage {
+    padding: 92px 24px 36px;
+  }
+
+  .resultShell h1 {
+    font-size: 44px;
+  }
+
+  .resultText {
+    font-size: 24px;
+  }
+
+  .finalResult strong {
+    font-size: 96px;
+  }
+
+  .statsGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .historyList li {
+    align-items: start;
+    grid-template-columns: 54px 1fr;
+  }
+
+  .historyList small {
+    grid-column: 2;
+  }
+}
