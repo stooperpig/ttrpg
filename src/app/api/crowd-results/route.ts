@@ -76,7 +76,9 @@ export async function POST(request: Request) {
     }
 
     const rolls = Array.isArray(body.rolls)
-      ? body.rolls.map((roll) => clampInteger(roll, 1, state.activePrompt!.diceSize))
+      ? (body.rolls as unknown[]).map((roll: unknown) =>
+          clampInteger(roll, 1, state.activePrompt!.diceSize)
+        )
       : [];
 
     if (rolls.length !== state.activePrompt.diceCount) {
