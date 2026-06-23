@@ -1,0 +1,94 @@
+.page {
+  width: 100%;
+}
+
+.hero {
+  align-items: flex-start;
+  background-image: linear-gradient(rgba(22, 19, 20, 0.62), rgba(22, 19, 20, 0.84)), url("/MS_Dice_Chat.jpg");
+  background-position: center;
+  background-size: cover;
+  min-height: 260px;
+}
+
+.heroInner,
+.content,
+.linkGrid {
+  max-width: 980px;
+  width: 100%;
+}
+
+.heroInner {
+  padding-top: 70px;
+}
+
+.eyebrow {
+  color: #02b8e6;
+  font-family: "garamond-premier-pro", serif;
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0 0 10px;
+  text-transform: uppercase;
+}
+
+.intro {
+  font-size: 22px;
+  line-height: 1.45;
+  max-width: 860px;
+}
+
+.content {
+  align-items: flex-start;
+  gap: 18px;
+}
+
+.sectionBlock {
+  max-width: 860px;
+}
+
+.sectionBlock p,
+.faqItem p {
+  line-height: 1.55;
+}
+
+.ctaRow,
+.linkGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.faq {
+  align-items: flex-start;
+  background-color: rgba(112, 91, 57, 0.18);
+}
+
+.faqItem {
+  max-width: 860px;
+}
+
+.faqItem h3 {
+  margin-bottom: 0;
+}
+
+.links {
+  align-items: flex-start;
+}
+
+.textLink {
+  border-bottom: 1px solid #02b8e6;
+  color: #02b8e6;
+  font-family: "garamond-premier-pro", serif;
+  font-size: 18px;
+  font-weight: 700;
+  padding-bottom: 4px;
+}
+
+@media (min-width: 600px) {
+  .hero {
+    min-height: 330px;
+  }
+
+  .intro {
+    font-size: 24px;
+  }
+}

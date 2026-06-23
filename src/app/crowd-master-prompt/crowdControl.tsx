@@ -51,7 +51,7 @@ export default function CrowdControl() {
     }
 
     return Math.max(0, Math.ceil((new Date(activePrompt.closesAt).getTime() - Date.now()) / 1000));
-  }, [activePrompt, state?.serverTime]);
+  }, [activePrompt]);
 
   const refresh = async () => {
     try {

@@ -6,6 +6,7 @@ import Link from "next/link";
 import { ClientPost } from "@/app/api/posts/route";
 import styles from "./page.module.css";
 import { useParams } from "next/navigation";
+import Image from "next/image";
 
 export default function BlogPost() {
     const params = useParams<{ slug?: string }>();
@@ -34,7 +35,7 @@ export default function BlogPost() {
         if (url === undefined)
             return null;
         else {
-            return (<img src={url} className={styles.image} />);
+            return (<Image src={url} alt={post?.title ?? "Blog post image"} className={styles.image} width={640} height={400} />);
         }
     }
 

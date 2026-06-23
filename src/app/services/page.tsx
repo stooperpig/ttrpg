@@ -2,6 +2,13 @@ import Link from "next/link";
 import ServicePanel from "../_components/service_panel";
 import { Service } from "../_types/types";
 import styles from './page.module.css';
+import { pageMetadata } from "../_lib/seo";
+
+export const metadata = pageMetadata({
+    title: "Services | Malve Studios",
+    description: "Review Malve Studios services for online campaigns, in-person games, and vetted professional Game Master matching.",
+    path: "/services",
+});
 
 export default function Services() {
     const services: Service[] = [{
@@ -57,26 +64,9 @@ export default function Services() {
                 </div>
             </div>
 
-            {/* <div className={`section ${styles.services}`}>
-                <h3 className={styles.h3}>Now Serving the following locations for In-Person Sessions:</h3>
-                <ul>
-                    <li>Austin, Texas</li>
-                    <li>Los Angeles, California</li>
-                    <li>Twin Cities, Minnesota</li>
-                    <li>Columbus, Ohio</li>
-                </ul>
-            </div> */}
-{/* 
-            <iframe className={styles.iframe} src="https://malvestudios.notion.site/ebd/b07ae1ffaa63402281be87d5e94b916d?v=283e3e39b102422983772b22326d5312" width="85%" height="900" frameBorder="0" allowFullScreen />
-
-            {/* <div className={styles.calendar}>
-                <p><Link className={styles.link} href="https://malvestudios.notion.site/b07ae1ffaa63402281be87d5e94b916d?v=283e3e39b102422983772b22326d5312">Mobile Friendly Calendar</Link></p>
-            </div> */}
-
-
             <div className="section">
                 <h3 className={styles.h3}>Need something more specific?</h3> <br />
-                <Link href="/contact-us#business"><div className="cta_button">Contact Us</div></Link>
+                <Link href="/contact-us#business" className="cta_button">Contact Us</Link>
             </div>
         </>
     )

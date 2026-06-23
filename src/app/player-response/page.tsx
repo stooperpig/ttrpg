@@ -1,9 +1,6 @@
-import Survey from "../_components/survey/survey";
+import { redirect } from "next/navigation";
+import { intakeUrl } from "../_lib/seo";
 
 export default function PlayerResponse() {
-    return (
-        <div className="top-section">
-            <Survey />
-        </div>
-    )
+    redirect(intakeUrl);
 }

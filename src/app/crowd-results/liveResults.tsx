@@ -63,7 +63,7 @@ export default function LiveResults() {
     }
 
     return Math.max(0, Math.ceil((new Date(activePrompt.closesAt).getTime() - Date.now()) / 1000));
-  }, [activePrompt, state?.serverTime]);
+  }, [activePrompt]);
 
   useEffect(() => {
     let ignore = false;

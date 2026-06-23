@@ -62,7 +62,7 @@ export default function MobileCrowdForm() {
     }
 
     return Math.max(0, Math.ceil((new Date(activePrompt.closesAt).getTime() - Date.now()) / 1000));
-  }, [activePrompt, state?.serverTime]);
+  }, [activePrompt]);
   const localTotal = localRoll?.reduce((sum, roll) => sum + roll, 0) ?? null;
   const hasSubmitted = activePrompt ? submittedPromptId === activePrompt.id : false;
 

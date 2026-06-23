@@ -4,14 +4,44 @@ import Header from "./_components/header";
 import Footer from "./_components/footer";
 import Script from "next/script";
 import { SpeedInsights } from '@vercel/speed-insights/next';
+import { absoluteUrl, coreDescription, defaultOgImage, siteName, siteUrl } from "./_lib/seo";
 
 
 export const metadata: Metadata = {
-  title: "Malve Studios",
-  description: "Vetted professional DMs for online and in person Dungeons and Dragons games",
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: "Malve Studios | Vetted TTRPG Game Master Matching",
+    template: "%s",
+  },
+  description: coreDescription,
   keywords: ["pro dm", "pro gm", "Professional Dungeon Master", "dungeon master", "dm", "game master",
     "start playing dnd", "learn to play dnd", "dnd", "D&D", "dungeons and dragons", "ttrpg", "foundry",
-    "play dnd", "find dnd group", "how to find dnd groups near me", "play dnd online"]
+    "play dnd", "find dnd group", "how to find dnd groups near me", "play dnd online"],
+  alternates: {
+    canonical: siteUrl,
+  },
+  openGraph: {
+    title: "Malve Studios | Vetted TTRPG Game Master Matching",
+    description: coreDescription,
+    url: siteUrl,
+    siteName,
+    images: [
+      {
+        url: absoluteUrl(defaultOgImage),
+        width: 1200,
+        height: 630,
+        alt: "Malve Studios tabletop roleplaying game table",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Malve Studios | Vetted TTRPG Game Master Matching",
+    description: coreDescription,
+    images: [absoluteUrl(defaultOgImage)],
+  },
 };
 
 export default function RootLayout({
@@ -23,9 +53,9 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <Script src="https://www.googletagmanager.com/gtag/js?id=G-6D0539ZP2P" strategy="beforeInteractive" />
-        <Script src="gtag.js" strategy="beforeInteractive" />
+        <Script src="/gtag.js" strategy="beforeInteractive" />
         <link rel="stylesheet" href="https://use.typekit.net/cix6ttg.css" />
-        <Script src="pro_dm_fb_tag.js" strategy="beforeInteractive" />
+        <Script src="/pro_dm_fb_tag.js" strategy="beforeInteractive" />
       </head>
       <body>
         <Header />

@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import styles from './page.module.css';
 import { ClientPost } from '../api/posts/route';
 import { useRouter } from 'next/navigation';
+import Image from 'next/image';
 
 export default function ProDMBlog() {
     const [loading, setLoading] = useState<boolean>(true);
@@ -36,7 +37,7 @@ export default function ProDMBlog() {
         return (
             <div className={styles.post} onClick={() => handlePostClick(post.slug)}>
                 <div>
-                    <img className={styles.image} src={post.image} />
+                    <Image className={styles.image} src={post.image} alt={post.title} width={220} height={125} />
                 </div>
                 <div className={styles.post_entry}>
                     <div className={styles.post_title}>{post.title}</div>
