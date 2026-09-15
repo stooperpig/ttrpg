@@ -70,6 +70,27 @@
   line-height: 0.86;
 }
 
+.dualityResult {
+  display: grid;
+  gap: 8px;
+  margin: 12px 0 24px;
+  max-width: 620px;
+}
+
+.dualityResult span,
+.dualityResult p {
+  color: #fff0de;
+  font: 30px "garamond-premier-pro", serif;
+  line-height: 1.1;
+  margin: 0;
+}
+
+.dualityResult strong {
+  color: #02b8e6;
+  font: 86px "meno-banner-condensed", serif;
+  line-height: 0.9;
+}
+
 .statsGrid {
   display: grid;
   gap: 10px;
@@ -148,6 +169,10 @@
 
   .finalResult strong {
     font-size: 96px;
+  }
+
+  .dualityResult strong {
+    font-size: 64px;
   }
 
   .statsGrid {

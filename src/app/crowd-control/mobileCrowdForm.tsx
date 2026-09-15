@@ -3,9 +3,13 @@
 import { useEffect, useMemo, useState } from "react";
 import styles from "./page.module.css";
 
+type RollMode = "d20" | "daggerheart";
+type DaggerheartTone = "hope" | "fear" | "critical";
+
 type RollPrompt = {
   id: string;
   label: string;
+  rollMode: RollMode;
   diceCount: number;
   diceSize: number;
   collectionStartedAt: string | null;
@@ -14,7 +18,10 @@ type RollPrompt = {
 
 type RollSubmission = {
   promptId: string;
-  rolls: number[];
+  rollMode: RollMode;
+  d20?: number | null;
+  hopeDie?: number | null;
+  fearDie?: number | null;
   total: number;
 };
 
@@ -23,6 +30,20 @@ type CrowdState = {
   submissions: RollSubmission[];
   serverTime: string;
 };
+
+type LocalResult =
+  | {
+      rollMode: "d20";
+      d20: number;
+      total: number;
+    }
+  | {
+      rollMode: "daggerheart";
+      hopeDie: number;
+      fearDie: number;
+      total: number;
+      tone: DaggerheartTone;
+    };
 
 function getParticipantId() {
   const existingId = window.sessionStorage.getItem("crowd-roll-participant-id");
@@ -39,18 +60,55 @@ function getParticipantId() {
   return newId;
 }
 
-function rollDice(diceCount: number, diceSize: number) {
-  return Array.from(
-    { length: diceCount },
-    () => Math.floor(Math.random() * diceSize) + 1
-  );
+function rollD20() {
+  return Math.floor(Math.random() * 20) + 1;
+}
+
+function rollD12() {
+  return Math.floor(Math.random() * 12) + 1;
+}
+
+function getDaggerheartTone(hopeDie: number, fearDie: number): DaggerheartTone {
+  if (hopeDie > fearDie) {
+    return "hope";
+  }
+
+  if (fearDie > hopeDie) {
+    return "fear";
+  }
+
+  return "critical";
+}
+
+function rollDaggerheartDualityDice() {
+  const hopeDie = rollD12();
+  const fearDie = rollD12();
+
+  return {
+    rollMode: "daggerheart" as const,
+    hopeDie,
+    fearDie,
+    total: hopeDie + fearDie,
+    tone: getDaggerheartTone(hopeDie, fearDie),
+  };
+}
+
+function formatTone(tone: DaggerheartTone) {
+  switch (tone) {
+    case "hope":
+      return "With Hope";
+    case "fear":
+      return "With Fear";
+    case "critical":
+      return "Critical";
+  }
 }
 
 export default function MobileCrowdForm() {
   const [state, setState] = useState<CrowdState | null>(null);
   const [participantId, setParticipantId] = useState("");
   const [participantName, setParticipantName] = useState("");
-  const [localRoll, setLocalRoll] = useState<number[] | null>(null);
+  const [localResult, setLocalResult] = useState<LocalResult | null>(null);
   const [seenPromptId, setSeenPromptId] = useState("");
   const [submittedPromptId, setSubmittedPromptId] = useState("");
   const [message, setMessage] = useState("");
@@ -63,7 +121,6 @@ export default function MobileCrowdForm() {
 
     return Math.max(0, Math.ceil((new Date(activePrompt.closesAt).getTime() - Date.now()) / 1000));
   }, [activePrompt]);
-  const localTotal = localRoll?.reduce((sum, roll) => sum + roll, 0) ?? null;
   const hasSubmitted = activePrompt ? submittedPromptId === activePrompt.id : false;
 
   useEffect(() => {
@@ -94,7 +151,7 @@ export default function MobileCrowdForm() {
   useEffect(() => {
     if (activePrompt && activePrompt.id !== seenPromptId) {
       setSeenPromptId(activePrompt.id);
-      setLocalRoll(null);
+      setLocalResult(null);
       setSubmittedPromptId("");
       setMessage("");
     }
@@ -106,8 +163,19 @@ export default function MobileCrowdForm() {
       return;
     }
 
-    const rolls = rollDice(activePrompt.diceCount, activePrompt.diceSize);
-    setLocalRoll(rolls);
+    const result: LocalResult =
+      activePrompt.rollMode === "daggerheart"
+        ? rollDaggerheartDualityDice()
+        : {
+            rollMode: "d20",
+            d20: rollD20(),
+            total: 0,
+          };
+
+    const resultWithTotal =
+      result.rollMode === "d20" ? { ...result, total: result.d20 } : result;
+
+    setLocalResult(resultWithTotal);
     setMessage("Roll made. Sending it to the results page.");
 
     try {
@@ -119,7 +187,10 @@ export default function MobileCrowdForm() {
           promptId: activePrompt.id,
           participantId,
           participantName,
-          rolls,
+          rollMode: resultWithTotal.rollMode,
+          d20: resultWithTotal.rollMode === "d20" ? resultWithTotal.d20 : null,
+          hopeDie: resultWithTotal.rollMode === "daggerheart" ? resultWithTotal.hopeDie : null,
+          fearDie: resultWithTotal.rollMode === "daggerheart" ? resultWithTotal.fearDie : null,
         }),
       });
 
@@ -144,7 +215,9 @@ export default function MobileCrowdForm() {
         <h1>{activePrompt ? activePrompt.label : "Waiting for the roll"}</h1>
         <p>
           {activePrompt
-            ? `Roll ${activePrompt.diceCount}d${activePrompt.diceSize} before the window closes.`
+            ? activePrompt.rollMode === "daggerheart"
+              ? "Roll Hope and Fear before the window closes."
+              : "Roll the d20 before the window closes."
             : "The control page will send the next dice prompt here."}
         </p>
       </section>
@@ -175,14 +248,29 @@ export default function MobileCrowdForm() {
             onClick={handleRoll}
             type="button"
           >
-            {hasSubmitted ? "Roll submitted" : `Roll ${activePrompt.diceCount}d${activePrompt.diceSize}`}
+            {hasSubmitted
+              ? "Roll submitted"
+              : activePrompt.rollMode === "daggerheart"
+                ? "ROLL HOPE & FEAR"
+                : "ROLL THE D20"}
           </button>
 
-          {localRoll && (
+          {localResult && (
             <div className={styles.localResult}>
               <span>Your roll</span>
-              <strong>{localTotal}</strong>
-              <p>{localRoll.join(" + ")}</p>
+              {localResult.rollMode === "daggerheart" ? (
+                <>
+                  <strong>{localResult.total}</strong>
+                  <p>Hope: {localResult.hopeDie}</p>
+                  <p>Fear: {localResult.fearDie}</p>
+                  <p>Result: {formatTone(localResult.tone)}</p>
+                </>
+              ) : (
+                <>
+                  <strong>{localResult.d20}</strong>
+                  <p>d20 result</p>
+                </>
+              )}
             </div>
           )}
         </div>

@@ -7,6 +7,7 @@ import styles from "./page.module.css";
 type RollPrompt = {
   id: string;
   label: string;
+  rollMode: "d20" | "daggerheart";
   diceCount: number;
   diceSize: number;
   collectionStartedAt: string | null;
@@ -22,12 +23,22 @@ type RollSubmission = {
 
 type RollOutcome = {
   status: "waiting" | "final";
+  rollMode: "d20" | "daggerheart";
   finalResult: number | null;
   average: number | null;
   submissionCount: number;
   ones: number;
   twenties: number;
   rule: string;
+  daggerheartResult: {
+    roundedHope: number;
+    roundedFear: number;
+    roundedTotal: number;
+    hopeDominantCount: number;
+    fearDominantCount: number;
+    criticalCount: number;
+    finalTone: "hope" | "fear" | "critical" | "mixed";
+  } | null;
 };
 
 type CrowdState = {
@@ -40,8 +51,7 @@ type CrowdState = {
 export default function CrowdControl() {
   const [state, setState] = useState<CrowdState | null>(null);
   const [label, setLabel] = useState("Group check");
-  const [diceCount, setDiceCount] = useState(1);
-  const [diceSize, setDiceSize] = useState(20);
+  const [rollMode, setRollMode] = useState<"d20" | "daggerheart">("d20");
   const [status, setStatus] = useState("Loading current roll prompt...");
 
   const activePrompt = state?.activePrompt ?? null;
@@ -75,8 +85,7 @@ export default function CrowdControl() {
         body: JSON.stringify({
           action: "createPrompt",
           label,
-          diceCount,
-          diceSize,
+          rollMode,
         }),
       });
 
@@ -137,28 +146,29 @@ export default function CrowdControl() {
           />
         </label>
 
-        <div className={styles.diceGrid}>
+        <fieldset className={styles.modeSelector}>
+          <legend>Roll mode</legend>
           <label>
-            <span>Dice count</span>
             <input
-              max={20}
-              min={1}
-              onChange={(event) => setDiceCount(Number(event.target.value))}
-              type="number"
-              value={diceCount}
+              checked={rollMode === "d20"}
+              name="rollMode"
+              onChange={() => setRollMode("d20")}
+              type="radio"
+              value="d20"
             />
+            <span>d20 Crowd Roll</span>
           </label>
           <label>
-            <span>Dice size</span>
             <input
-              max={100}
-              min={2}
-              onChange={(event) => setDiceSize(Number(event.target.value))}
-              type="number"
-              value={diceSize}
+              checked={rollMode === "daggerheart"}
+              name="rollMode"
+              onChange={() => setRollMode("daggerheart")}
+              type="radio"
+              value="daggerheart"
             />
+            <span>Daggerheart Hope/Fear Roll</span>
           </label>
-        </div>
+        </fieldset>
 
         <button type="submit">Send roll prompt</button>
       </form>
@@ -173,10 +183,17 @@ export default function CrowdControl() {
           <p className={styles.eyebrow}>Current Prompt</p>
           <h2>{activePrompt.label}</h2>
           <p>
-            {activePrompt.diceCount}d{activePrompt.diceSize} /{" "}
+            {activePrompt.rollMode === "daggerheart" ? "Hope/Fear d12" : "1d20"} /{" "}
             {activePrompt.collectionStartedAt ? `${secondsRemaining}s left` : "waiting for first roll"} /{" "}
             {state?.outcome.submissionCount ?? 0} submitted
           </p>
+          {state?.outcome.daggerheartResult && (
+            <p>
+              Hope {state.outcome.daggerheartResult.hopeDominantCount} / Fear{" "}
+              {state.outcome.daggerheartResult.fearDominantCount} / Critical{" "}
+              {state.outcome.daggerheartResult.criticalCount}
+            </p>
+          )}
           <small>{state?.outcome.rule}</small>
         </div>
       ) : (

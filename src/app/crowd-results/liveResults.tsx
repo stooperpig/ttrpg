@@ -3,24 +3,42 @@
 import { useEffect, useMemo, useState } from "react";
 import styles from "./page.module.css";
 
+type RollMode = "d20" | "daggerheart";
+type DaggerheartTone = "hope" | "fear" | "critical" | "mixed";
+
 type RollPrompt = {
   id: string;
   label: string;
+  rollMode: RollMode;
   diceCount: number;
   diceSize: number;
   collectionStartedAt: string | null;
   closesAt: string | null;
 };
 
+type DaggerheartCrowdResult = {
+  roundedHope: number;
+  roundedFear: number;
+  roundedTotal: number;
+  hopeDominantCount: number;
+  fearDominantCount: number;
+  criticalCount: number;
+  finalTone: DaggerheartTone;
+};
+
 type RollSubmission = {
   id: string;
   participantName: string;
-  rolls: number[];
+  rollMode: RollMode;
+  d20?: number | null;
+  hopeDie?: number | null;
+  fearDie?: number | null;
   total: number;
 };
 
 type RollOutcome = {
   status: "waiting" | "final";
+  rollMode: RollMode;
   finalResult: number | null;
   average: number | null;
   submissionCount: number;
@@ -28,11 +46,13 @@ type RollOutcome = {
   ones: number;
   twenties: number;
   rule: string;
+  daggerheartResult: DaggerheartCrowdResult | null;
 };
 
 type RollHistoryEntry = {
   promptId: string;
   label: string;
+  rollMode: RollMode;
   dice: string;
   finalResult: number | null;
   average: number | null;
@@ -40,6 +60,7 @@ type RollHistoryEntry = {
   ones: number;
   twenties: number;
   rule: string;
+  daggerheartResult: DaggerheartCrowdResult | null;
   finalizedAt: string;
 };
 
@@ -50,6 +71,19 @@ type CrowdState = {
   history: RollHistoryEntry[];
   serverTime: string;
 };
+
+function formatTone(tone: DaggerheartTone) {
+  switch (tone) {
+    case "hope":
+      return "With Hope";
+    case "fear":
+      return "With Fear";
+    case "critical":
+      return "Critical";
+    case "mixed":
+      return "Mixed";
+  }
+}
 
 export default function LiveResults() {
   const [state, setState] = useState<CrowdState | null>(null);
@@ -89,14 +123,14 @@ export default function LiveResults() {
 
   return (
     <section className={styles.resultShell}>
-      <p className={styles.eyebrow}>Live Dice Result</p>
+      <p className={styles.eyebrow}>
+        {activePrompt?.rollMode === "daggerheart" ? "Crowd Duality Roll" : "Live Dice Result"}
+      </p>
       {activePrompt && outcome ? (
         <>
           <h1>{activePrompt.label}</h1>
           <div className={styles.metaRow}>
-            <span>
-              {activePrompt.diceCount}d{activePrompt.diceSize}
-            </span>
+            <span>{activePrompt.rollMode === "daggerheart" ? "Hope/Fear d12" : "1d20"}</span>
             <span>{outcome.submissionCount} submitted</span>
             <span>
               {outcome.status === "final"
@@ -108,10 +142,19 @@ export default function LiveResults() {
           </div>
 
           {outcome.status === "final" ? (
-            <div className={styles.finalResult}>
-              <span>Result</span>
-              <strong>{outcome.finalResult ?? "No rolls"}</strong>
-            </div>
+            activePrompt.rollMode === "daggerheart" && outcome.daggerheartResult ? (
+              <div className={styles.dualityResult}>
+                <span>Hope: {outcome.daggerheartResult.roundedHope}</span>
+                <span>Fear: {outcome.daggerheartResult.roundedFear}</span>
+                <strong>Total: {outcome.daggerheartResult.roundedTotal}</strong>
+                <p>Result: {formatTone(outcome.daggerheartResult.finalTone)}</p>
+              </div>
+            ) : (
+              <div className={styles.finalResult}>
+                <span>Crowd Result</span>
+                <strong>{outcome.finalResult ?? "No rolls"}</strong>
+              </div>
+            )
           ) : (
             <div className={styles.finalResult}>
               <span>{activePrompt.collectionStartedAt ? "Collecting" : "Waiting"}</span>
@@ -121,12 +164,21 @@ export default function LiveResults() {
 
           <p className={styles.resultText}>{outcome.rule}</p>
 
-          <div className={styles.statsGrid}>
-            <span>Result: {outcome.average ?? "None"}</span>
-            <span>1s: {outcome.ones}</span>
-            <span>20s: {outcome.twenties}</span>
-            <span>Rolls: {outcome.rollCount}</span>
-          </div>
+          {activePrompt.rollMode === "daggerheart" && outcome.daggerheartResult ? (
+            <div className={styles.statsGrid}>
+              <span>Total rollers: {outcome.submissionCount}</span>
+              <span>With Hope: {outcome.daggerheartResult.hopeDominantCount}</span>
+              <span>With Fear: {outcome.daggerheartResult.fearDominantCount}</span>
+              <span>Criticals: {outcome.daggerheartResult.criticalCount}</span>
+            </div>
+          ) : (
+            <div className={styles.statsGrid}>
+              <span>Result: {outcome.average ?? "None"}</span>
+              <span>1s: {outcome.ones}</span>
+              <span>20s: {outcome.twenties}</span>
+              <span>Rolls: {outcome.rollCount}</span>
+            </div>
+          )}
         </>
       ) : (
         <div className={styles.emptyState}>
@@ -141,10 +193,18 @@ export default function LiveResults() {
           <ol className={styles.historyList}>
             {state.history.map((entry) => (
               <li key={entry.promptId}>
-                <strong>{entry.finalResult ?? "No rolls"}</strong>
+                <strong>
+                  {entry.rollMode === "daggerheart" && entry.daggerheartResult
+                    ? entry.daggerheartResult.roundedTotal
+                    : entry.finalResult ?? "No rolls"}
+                </strong>
                 <span>{entry.label}</span>
                 <small>
-                  {entry.dice} / {entry.submissionCount} submitted / {entry.rule}
+                  {entry.rollMode === "daggerheart" && entry.daggerheartResult
+                    ? `${entry.dice} / ${entry.submissionCount} submitted / Result: ${formatTone(
+                        entry.daggerheartResult.finalTone
+                      )}`
+                    : `${entry.dice} / ${entry.submissionCount} submitted / ${entry.rule}`}
                 </small>
               </li>
             ))}

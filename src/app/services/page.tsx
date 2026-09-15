@@ -13,27 +13,28 @@ export const metadata = pageMetadata({
 export default function Services() {
     const services: Service[] = [{
         title: 'Long-Term Campaign',
-        price: 35,
+        price: 50,
         priceText: 'PER SEAT',
         description: [
             '4 Hour Adventure',
             'Virtual Table Top Service',
-            'DM Earns $30/seat'
+            'Matched to a table through Hearth'
         ],
         cta: 'Book Your Adventure',
-        href: "https://www.paypal.com/ncp/payment/K7AD6TV7R7QZJ"
-    }, {
-        title: 'Drop-In Campaign',
-        price: 40,
-        priceText: 'PER SEAT',
-        description: [
-            '4 Hour Adventure',
-            'Virtual Table Top Service',
-            'DM Earns $35/seat'
-        ],
-        cta: 'Book Your Adventure',
-        href: "https://www.paypal.com/ncp/payment/JP95Z8ZWW7B4G"
-    },
+        href: "https://www.paypal.com/ncp/payment/LEYLJG3UDMU32"
+        },
+    //  {
+    //     title: 'One Shot Adventure',
+    //     price: 40,
+    //     priceText: 'PER SEAT',
+    //     description: [
+    //         '4 Hour Adventure',
+    //         'Virtual Table Top Service',
+    //         'DM Earns $35/seat'
+    //     ],
+    //     cta: 'Book Your Adventure',
+    //     href: "https://www.paypal.com/ncp/payment/JP95Z8ZWW7B4G"
+    // },
     {
         title: 'In-Person Games',
         price: '400',
